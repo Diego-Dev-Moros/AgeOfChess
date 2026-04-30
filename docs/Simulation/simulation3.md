@@ -16,13 +16,13 @@ Purpose:
 
 Related references:
 
-- [[simulations_guide]]
-- [[Dirty_Play]]
-- [[Cowardice]]
-- [[King]]
-- [[Time_System]]
-- [[Frenzy_Phase]]
-- [[Card_Balance]]
+- [[Simulation/simulations_guide|simulations_guide]]
+- [[Systems/Terrain/Dirty_Play|Dirty_Play]]
+- [[Systems/Cards/Debuffs/Cowardice|Cowardice]]
+- [[Systems/King/King|King]]
+- [[Systems/Time/Time_System|Time_System]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy_Phase]]
+- [[Balancing/Card_Balance|Card_Balance]]
 
 ---
 

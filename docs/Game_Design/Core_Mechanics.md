@@ -79,7 +79,7 @@ The game operates through 5 interacting systems:
 
 # 6. SYSTEM PRIORITY ORDER
 
-When multiple effects apply, use [[Timing_And_Priority]] as the canonical reference.
+When multiple effects apply, use [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]] as the canonical reference.
 
 High-level order:
 

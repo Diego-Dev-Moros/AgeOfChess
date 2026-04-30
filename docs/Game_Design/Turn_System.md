@@ -6,7 +6,7 @@
 
 The Turn System defines how a player's action is declared, validated, resolved, and cleaned up.
 
-For detailed timing, use [[Timing_And_Priority]] as the source of truth.
+For detailed timing, use [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]] as the source of truth.
 
 ---
 
@@ -34,7 +34,7 @@ A player may normally take one action:
 - Attack by moving a non-King piece into an enemy non-King piece.
 - Use the King's Divine Attack if legal and available.
 
-During [[Frenzy_Phase]], normal combat and Divine Attack are disabled by default.
+During [[Systems/Frenzy/Frenzy_Phase|Frenzy_Phase]], normal combat and Divine Attack are disabled by default.
 
 ---
 

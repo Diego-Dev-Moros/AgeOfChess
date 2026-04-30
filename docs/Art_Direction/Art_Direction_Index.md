@@ -1,0 +1,45 @@
+# Art Direction Index
+
+---
+
+# 1. Purpose
+
+This index is the Obsidian entry point for the Age of Chess visual foundation.
+
+Use these documents before creating or approving any visual asset.
+
+---
+
+# 2. Core References
+
+- [[Art_Direction/Style_Guide|Style Guide]]
+- [[Art_Direction/Color_Palette|Color Palette]]
+- [[Art_Direction/Lighting_and_Shading|Lighting and Shading]]
+- [[Art_Direction/Visual_Identity|Visual Identity]]
+- [[Art_Direction/Pixel_Standards|Pixel Standards]]
+- [[Art_Direction/Visual_Decisions_and_Open_Questions|Visual Decisions and Open Questions]]
+
+---
+
+# 3. Production Priority
+
+1. [[Art_Direction/Pixel_Standards|Pixel Standards]]
+2. [[Art_Direction/Color_Palette|Color Palette]]
+3. [[Art_Direction/Lighting_and_Shading|Lighting and Shading]]
+4. [[Art_Direction/Visual_Identity|Visual Identity]]
+5. [[Art_Direction/Style_Guide|Style Guide]]
+
+---
+
+# 4. Related Asset References
+
+- [[Assets_Design/Assets_Design_Index|Assets Design Index]]
+- [[Assets_Design/Cards/Cards_Index|Cards Asset Design Index]]
+- [[Assets_Design/Pieces/Pieces_Index|Pieces Asset Design Index]]
+- [[Assets_Design/Board/Board_Index|Board Asset Design Index]]
+- [[Assets_Design/UI/UI_Index|UI Asset Design Index]]
+- [[Assets_Design/Dice/Dice_Index|Dice Asset Design Index]]
+
+---
+
+END

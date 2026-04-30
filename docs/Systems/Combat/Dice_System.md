@@ -84,7 +84,7 @@ When combat begins:
 
 Dice are only rolled if the attack passes all pre-action failure checks.
 
-See [[Timing_And_Priority]].
+See [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]].
 
 ---
 

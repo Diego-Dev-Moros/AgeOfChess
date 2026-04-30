@@ -4,21 +4,21 @@
 
 # Balance References
 
-- [[Balance]]
-- [[Combat_Probabilities]]
-- [[Card_Balance]]
+- [[Balancing/Balance|Balance]]
+- [[Balancing/Combat_Probabilities|Combat_Probabilities]]
+- [[Balancing/Card_Balance|Card_Balance]]
 
 ---
 
 # Systems To Validate
 
-- [[Combat_Flow]]
-- [[King]]
-- [[Buffs]]
-- [[Debuffs]]
-- [[Terrain]]
-- [[Time_System]]
-- [[Frenzy_Phase]]
+- [[Systems/Combat/Combat_Flow|Combat_Flow]]
+- [[Systems/King/King|King]]
+- [[Systems/Cards/Buffs|Buffs]]
+- [[Systems/Cards/Debuffs|Debuffs]]
+- [[Systems/Terrain/Terrain|Terrain]]
+- [[Systems/Time/Time_System|Time_System]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy_Phase]]
 
 ---
 

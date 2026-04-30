@@ -17,13 +17,13 @@ Purpose:
 
 Related references:
 
-- [[simulations_guide]]
-- [[King]]
+- [[Simulation/simulations_guide|simulations_guide]]
+- [[Systems/King/King|King]]
 - [[Edge_Cases]]
-- [[Fatigue]]
-- [[Last_Will]]
-- [[Holy_Ground]]
-- [[Timing_And_Priority]]
+- [[Systems/Cards/Debuffs/Fatigue|Fatigue]]
+- [[Systems/Cards/Buffs/Last_Will|Last_Will]]
+- [[Systems/Terrain/Holy_Ground|Holy_Ground]]
+- [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]]
 
 ---
 

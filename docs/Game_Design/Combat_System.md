@@ -1,8 +1,8 @@
 # COMBAT SYSTEM
 
-System reference: [[Combat_Flow]]
+System reference: [[Systems/Combat/Combat_Flow|Combat_Flow]]
 
-Timing reference: [[Timing_And_Priority]]
+Timing reference: [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]]
 
 ---
 

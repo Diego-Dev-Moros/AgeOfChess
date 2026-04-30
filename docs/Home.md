@@ -16,38 +16,40 @@ Age of Chess is a tactical chess variant where classical movement remains intact
 - [[Cards_Index]]
 - [[Terrain_Index]]
 - [[Balancing_Index]]
-- [[Rules]]
-- [[System]]
+- [[Art_Direction/Art_Direction_Index|Art Direction Index]]
+- [[Assets_Design/Assets_Design_Index|Assets Design Index]]
+- [[Game_Design/Rules|Rules]]
+- [[Game_Design/System|System]]
 - [[Edge_Cases]]
 
 ---
 
 # 3. Core Design Documents
 
-- [[Core_Mechanics]]
-- [[Rules]]
-- [[System]]
-- [[Turn_System]]
-- [[Pieces_System]]
-- [[Combat_System]]
+- [[Game_Design/Core_Mechanics|Core_Mechanics]]
+- [[Game_Design/Rules|Rules]]
+- [[Game_Design/System|System]]
+- [[Game_Design/Turn_System|Turn_System]]
+- [[Game_Design/Pieces_System|Pieces_System]]
+- [[Game_Design/Combat_System|Combat_System]]
 - [[Game_Design/Cards_System|Cards_System]]
-- [[King_System]]
+- [[Game_Design/King_System|King_System]]
 
 ---
 
 # 4. Canonical System References
 
-- [[Timing_And_Priority]]
-- [[Combat_Flow]]
-- [[Damage_Calculation]]
-- [[Dice_System]]
-- [[King]]
-- [[Time_System]]
-- [[Frenzy_Phase]]
+- [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]]
+- [[Systems/Combat/Combat_Flow|Combat_Flow]]
+- [[Systems/Combat/Damage_Calculation|Damage_Calculation]]
+- [[Systems/Combat/Dice_System|Dice_System]]
+- [[Systems/King/King|King]]
+- [[Systems/Time/Time_System|Time_System]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy_Phase]]
 - [[Systems/Cards/Cards_System|Cards System Reference]]
-- [[Buffs]]
-- [[Debuffs]]
-- [[Terrain]]
+- [[Systems/Cards/Buffs|Buffs]]
+- [[Systems/Cards/Debuffs|Debuffs]]
+- [[Systems/Terrain/Terrain|Terrain]]
 
 ---
 
@@ -59,6 +61,18 @@ Age of Chess is a tactical chess variant where classical movement remains intact
 - Divine Attack as check response is proposed, not official.
 
 See [[Edge_Cases]].
+
+---
+
+# 6. Visual Documentation
+
+- [[Art_Direction/Art_Direction_Index|Art Direction Index]]
+- [[Assets_Design/Assets_Design_Index|Assets Design Index]]
+- [[Assets_Design/Cards/Cards_Index|Cards Asset Design Index]]
+- [[Assets_Design/Pieces/Pieces_Index|Pieces Asset Design Index]]
+- [[Assets_Design/Board/Board_Index|Board Asset Design Index]]
+- [[Assets_Design/UI/UI_Index|UI Asset Design Index]]
+- [[Assets_Design/Dice/Dice_Index|Dice Asset Design Index]]
 
 ---
 

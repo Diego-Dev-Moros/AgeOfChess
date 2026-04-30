@@ -70,7 +70,7 @@ Combat is resolved in the following order:
 15. Check deaths and death effects
 16. Resolve board position
 
-The canonical timing reference is [[Timing_And_Priority]].
+The canonical timing reference is [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]].
 
 ---
 

@@ -19,12 +19,12 @@ Cards create asymmetry through player-specific modifiers while preserving the co
 
 # 2. Related Documents
 
-- [[Buffs]]
-- [[Debuffs]]
-- [[Card_Balance]]
-- [[Timing_And_Priority]]
+- [[Systems/Cards/Buffs|Buffs]]
+- [[Systems/Cards/Debuffs|Debuffs]]
+- [[Balancing/Card_Balance|Card_Balance]]
+- [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]]
 - [[Edge_Cases]]
-- [[Frenzy_Phase]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy_Phase]]
 
 ---
 
@@ -174,7 +174,7 @@ Cards may only affect those systems if a card explicitly says so.
 
 # 12. Timing Reference
 
-Card timing must follow [[Timing_And_Priority]].
+Card timing must follow [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]].
 
 General timing:
 

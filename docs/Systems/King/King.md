@@ -169,7 +169,7 @@ Check response has priority over Commitment.
 
 If a committed King is in check, the King may move to escape check as long as the move is legal.
 
-See [[Timing_And_Priority]] and [[Edge_Cases]].
+See [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]] and [[Edge_Cases]].
 
 ---
 

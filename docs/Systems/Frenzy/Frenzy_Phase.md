@@ -16,7 +16,7 @@ During Frenzy, the game temporarily collapses into a simplified and deterministi
 
 The goal of Frenzy is to force the match toward resolution.
 
-Timing reference: [[Timing_And_Priority]]
+Timing reference: [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]]
 
 ---
 

@@ -36,11 +36,11 @@ Current simulations:
 
 These simulations use the current rules ecosystem:
 
-- [[Timing_And_Priority]]
+- [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]]
 - [[Edge_Cases]]
 - [[Systems/Cards/Cards_System|Cards System Reference]]
-- [[Frenzy_Phase]]
-- [[Time_System]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy_Phase]]
+- [[Systems/Time/Time_System|Time_System]]
 
 ---
 

@@ -147,7 +147,7 @@ When calculating damage, use this order:
 11. Check deaths
 12. Trigger death effects
 
-The canonical timing reference is [[Timing_And_Priority]].
+The canonical timing reference is [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]].
 
 ---
 

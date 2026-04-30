@@ -6,7 +6,7 @@
 
 This document records unresolved, unusual, or implementation-sensitive rules for Age of Chess.
 
-It should be used together with [[Timing_And_Priority]].
+It should be used together with [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]].
 
 ---
 

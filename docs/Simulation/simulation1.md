@@ -17,12 +17,12 @@ Purpose:
 
 Related references:
 
-- [[simulations_guide]]
-- [[Timing_And_Priority]]
-- [[Combat_Flow]]
-- [[Damage_Calculation]]
+- [[Simulation/simulations_guide|simulations_guide]]
+- [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]]
+- [[Systems/Combat/Combat_Flow|Combat_Flow]]
+- [[Systems/Combat/Damage_Calculation|Damage_Calculation]]
 - [[Systems/Cards/Cards_System|Cards System Reference]]
-- [[Frenzy_Phase]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy_Phase]]
 
 ---
 

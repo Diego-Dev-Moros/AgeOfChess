@@ -78,7 +78,7 @@ Buffs must respect these limits:
 
 # 6. When Buffs Apply
 
-Buffs are checked according to [[Timing_And_Priority]].
+Buffs are checked according to [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]].
 
 General timing:
 
@@ -152,16 +152,16 @@ Examples:
 
 Current Buff cards:
 
-- [[Giant_Slayer]]
-- [[Stone_Pieces]]
-- [[Iron_Age]]
-- [[Last_Will]]
+- [[Systems/Cards/Buffs/Giant_Slayer|Giant_Slayer]]
+- [[Systems/Cards/Buffs/Stone_Pieces|Stone_Pieces]]
+- [[Systems/Cards/Buffs/Iron_Age|Iron_Age]]
+- [[Systems/Cards/Buffs/Last_Will|Last_Will]]
 
 Important current clarification:
 
 - Stone Pieces raises its owner's combat damage floor to 2 when that piece deals combat damage.
 - This can include damage created by the Minimum Damage Rule.
-- See [[Stone_Pieces]] and [[Edge_Cases]].
+- See [[Systems/Cards/Buffs/Stone_Pieces|Stone_Pieces]] and [[Edge_Cases]].
 
 ---
 

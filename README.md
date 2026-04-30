@@ -4,6 +4,8 @@ Age of Chess is a tactical chess variant where classical movement remains intact
 
 The project is currently focused on game design documentation, system validation, and simulation-driven balancing inside an Obsidian-ready documentation vault.
 
+The documentation now also includes a visual design system for pixel art production, covering art direction, cards, pieces, board, UI, and dice.
+
 ---
 
 ## Project Identity
@@ -171,6 +173,8 @@ Important navigation files:
 - `docs/Cards_Index.md`
 - `docs/Terrain_Index.md`
 - `docs/Balancing_Index.md`
+- `docs/Art_Direction/Art_Direction_Index.md`
+- `docs/Assets_Design/Assets_Design_Index.md`
 - `docs/Edge_Cases.md`
 
 Canonical timing reference:
@@ -184,6 +188,45 @@ Official player-facing rules:
 Core system overview:
 
 - `docs/Game_Design/System.md`
+
+---
+
+## Visual Design System
+
+The visual foundation lives in:
+
+```txt
+docs/Art_Direction/
+docs/Assets_Design/
+```
+
+Recommended visual entry points:
+
+- `docs/Art_Direction/Art_Direction_Index.md`
+- `docs/Assets_Design/Assets_Design_Index.md`
+- `docs/Assets_Design/Cards/Cards_Index.md`
+- `docs/Assets_Design/Pieces/Pieces_Index.md`
+- `docs/Assets_Design/Board/Board_Index.md`
+- `docs/Assets_Design/UI/UI_Index.md`
+- `docs/Assets_Design/Dice/Dice_Index.md`
+
+The art direction defines:
+
+- Pixel art style.
+- Palette.
+- Lighting and shading.
+- Visual identity.
+- Pixel production standards.
+
+The asset design system defines:
+
+- Per-card visual specs for Buffs, Debuffs, and Terrain.
+- Per-piece sprite specs for Pawn, Knight, Bishop, Rook, Queen, and King.
+- Board and terrain visual rules.
+- UI rules for cards, HP, dice, and interaction states.
+- Dice icon and combat dice rules.
+
+Obsidian links in the visual docs use path-qualified links where names overlap with gameplay documents.
 
 ---
 
@@ -238,6 +281,16 @@ docs/
 +-- Systems/
 +-- Balancing/
 +-- Simulation/
++-- Art_Direction/
++-- Assets_Design/
+|   +-- Cards/
+|   |   +-- Buffs/
+|   |   +-- Debuffs/
+|   |   +-- Terrains/
+|   +-- Pieces/
+|   +-- Board/
+|   +-- UI/
+|   +-- Dice/
 +-- Home.md
 +-- Systems_Index.md
 +-- Cards_Index.md

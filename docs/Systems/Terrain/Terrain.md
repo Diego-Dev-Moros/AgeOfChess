@@ -127,7 +127,7 @@ Reduces the gap between strong and weak pieces.
 
 Example:
 
-- [[Equal_Conditions]]
+- [[Systems/Terrain/Equal_Conditions|Equal_Conditions]]
 
 ---
 
@@ -137,7 +137,7 @@ Rewards survival, sacrifice, or death-based momentum.
 
 Example:
 
-- [[Holy_Ground]]
+- [[Systems/Terrain/Holy_Ground|Holy_Ground]]
 
 ---
 
@@ -147,7 +147,7 @@ Punishes prolonged fighting or repeated deaths.
 
 Example:
 
-- [[Hell]]
+- [[Systems/Terrain/Hell|Hell]]
 
 ---
 
@@ -157,7 +157,7 @@ Improves all pieces globally.
 
 Example:
 
-- [[Will]]
+- [[Systems/Terrain/Will|Will]]
 
 ---
 
@@ -167,7 +167,7 @@ Adds risk, volatility, or uncertainty to combat.
 
 Example:
 
-- [[Dirty_Play]]
+- [[Systems/Terrain/Dirty_Play|Dirty_Play]]
 
 ---
 
@@ -175,11 +175,11 @@ Example:
 
 Current Terrain effects:
 
-- [[Equal_Conditions]]
-- [[Holy_Ground]]
-- [[Hell]]
-- [[Will]]
-- [[Dirty_Play]]
+- [[Systems/Terrain/Equal_Conditions|Equal_Conditions]]
+- [[Systems/Terrain/Holy_Ground|Holy_Ground]]
+- [[Systems/Terrain/Hell|Hell]]
+- [[Systems/Terrain/Will|Will]]
+- [[Systems/Terrain/Dirty_Play|Dirty_Play]]
 
 ---
 

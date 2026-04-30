@@ -2,7 +2,7 @@
 
 System reference: [[Systems/Cards/Cards_System|Cards System Reference]]
 
-Related documents: [[Buffs]], [[Debuffs]], [[Card_Balance]]
+Related documents: [[Systems/Cards/Buffs|Buffs]], [[Systems/Cards/Debuffs|Debuffs]], [[Balancing/Card_Balance|Card_Balance]]
 
 ---
 

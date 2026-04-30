@@ -462,7 +462,7 @@ Fatigue targeting remains an open design decision. Recommended first test: allie
 
 ## 10.1 Turn Structure
 
-Use [[Timing_And_Priority]] as the canonical timing reference.
+Use [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]] as the canonical timing reference.
 
 1. Select piece
 2. Move

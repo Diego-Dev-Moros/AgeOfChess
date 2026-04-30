@@ -76,7 +76,7 @@ A Debuff must NOT:
 
 # 6. When Debuffs Apply
 
-Debuffs are checked according to [[Timing_And_Priority]].
+Debuffs are checked according to [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]].
 
 General timing:
 
@@ -146,10 +146,10 @@ Examples:
 
 Current Debuff cards:
 
-- [[Crystal_Pieces]]
-- [[Cowardice]]
-- [[Immoral]]
-- [[Fatigue]]
+- [[Systems/Cards/Debuffs/Crystal_Pieces|Crystal_Pieces]]
+- [[Systems/Cards/Debuffs/Cowardice|Cowardice]]
+- [[Systems/Cards/Debuffs/Immoral|Immoral]]
+- [[Systems/Cards/Debuffs/Fatigue|Fatigue]]
 
 Open design note:
 

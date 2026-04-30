@@ -18,16 +18,16 @@ One timing source of truth.
 
 # 2. Related Documents
 
-- [[Turn_System]]
-- [[Combat_Flow]]
-- [[Damage_Calculation]]
-- [[Dice_System]]
-- [[King]]
-- [[Buffs]]
-- [[Debuffs]]
-- [[Terrain]]
-- [[Time_System]]
-- [[Frenzy_Phase]]
+- [[Game_Design/Turn_System|Turn_System]]
+- [[Systems/Combat/Combat_Flow|Combat_Flow]]
+- [[Systems/Combat/Damage_Calculation|Damage_Calculation]]
+- [[Systems/Combat/Dice_System|Dice_System]]
+- [[Systems/King/King|King]]
+- [[Systems/Cards/Buffs|Buffs]]
+- [[Systems/Cards/Debuffs|Debuffs]]
+- [[Systems/Terrain/Terrain|Terrain]]
+- [[Systems/Time/Time_System|Time_System]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy_Phase]]
 - [[Edge_Cases]]
 
 ---
@@ -71,7 +71,7 @@ If the player is in check:
 - The player must make a legal check response.
 - Check response has priority over King Commitment.
 
-See [[King]] and [[Edge_Cases]].
+See [[Systems/King/King|King]] and [[Edge_Cases]].
 
 ---
 
@@ -119,7 +119,7 @@ If an attack fails before combat:
 - The attacker remains in its original square.
 - The player's turn is consumed.
 
-See [[Cowardice]], [[Dirty_Play]], [[Fatigue]], and [[Edge_Cases]].
+See [[Systems/Cards/Debuffs/Cowardice|Cowardice]], [[Systems/Terrain/Dirty_Play|Dirty_Play]], [[Systems/Cards/Debuffs/Fatigue|Fatigue]], and [[Edge_Cases]].
 
 ---
 
@@ -212,7 +212,7 @@ Modifier sources:
 - Terrain
 - King corruption effects
 
-See [[Damage_Calculation]].
+See [[Systems/Combat/Damage_Calculation|Damage_Calculation]].
 
 ---
 
@@ -247,7 +247,7 @@ Example:
 - Last Will triggers after a piece dies in normal combat.
 - If Last Will kills the attacker, the attacker is removed and the target square becomes empty.
 
-See [[Last_Will]] and [[Edge_Cases]].
+See [[Systems/Cards/Buffs/Last_Will|Last_Will]] and [[Edge_Cases]].
 
 ---
 
@@ -313,7 +313,7 @@ When Frenzy begins:
 - Disable Divine Attack by default.
 - Use classical chess capture logic.
 
-See [[Frenzy_Phase]].
+See [[Systems/Frenzy/Frenzy_Phase|Frenzy_Phase]].
 
 ---
 

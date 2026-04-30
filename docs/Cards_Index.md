@@ -6,27 +6,27 @@
 
 - [[Systems/Cards/Cards_System|Cards System Reference]]
 - [[Game_Design/Cards_System|Cards System Overview]]
-- [[Buffs]]
-- [[Debuffs]]
-- [[Card_Balance]]
+- [[Systems/Cards/Buffs|Buffs]]
+- [[Systems/Cards/Debuffs|Debuffs]]
+- [[Balancing/Card_Balance|Card_Balance]]
 
 ---
 
 # Buffs
 
-- [[Giant_Slayer]]
-- [[Stone_Pieces]]
-- [[Iron_Age]]
-- [[Last_Will]]
+- [[Systems/Cards/Buffs/Giant_Slayer|Giant_Slayer]]
+- [[Systems/Cards/Buffs/Stone_Pieces|Stone_Pieces]]
+- [[Systems/Cards/Buffs/Iron_Age|Iron_Age]]
+- [[Systems/Cards/Buffs/Last_Will|Last_Will]]
 
 ---
 
 # Debuffs
 
-- [[Crystal_Pieces]]
-- [[Cowardice]]
-- [[Immoral]]
-- [[Fatigue]]
+- [[Systems/Cards/Debuffs/Crystal_Pieces|Crystal_Pieces]]
+- [[Systems/Cards/Debuffs/Cowardice|Cowardice]]
+- [[Systems/Cards/Debuffs/Immoral|Immoral]]
+- [[Systems/Cards/Debuffs/Fatigue|Fatigue]]
 
 ---
 
