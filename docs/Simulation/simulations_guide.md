@@ -356,7 +356,7 @@ The current three simulations suggest:
 
 ## Fatigue
 
-- Attack-range Fatigue is more strategic than global random targeting.
+- Adjacent 3x3 Fatigue is more readable than global random targeting.
 - It creates positioning counterplay.
 - It may be weaker when no valid allied target exists, because the result becomes a failed attack instead of damage.
 

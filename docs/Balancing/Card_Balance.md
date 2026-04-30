@@ -381,7 +381,7 @@ Enemy attacks have a 5% chance to redirect to a valid allied piece.
 - Only 5% base chance
 - Max probability cap 20%
 - Cannot target the King
-- Recommended first test: only redirects to valid allied pieces in legal attack range
+- Recommended first test: only redirects to valid allied pieces inside the 3x3 area centered on the attacker
 - If no valid target exists, attack fails
 - Does not apply during Frenzy
 

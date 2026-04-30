@@ -644,9 +644,9 @@ That would likely feel too punishing.
 
 ## Fatigue
 
-Attack-range Fatigue avoided random board-wide punishment.
+Adjacent 3x3 Fatigue avoided random board-wide punishment.
 
-However, it triggered as a failure when no valid allied target existed.
+However, it triggered as a failure when no adjacent valid allied target existed.
 
 This is clean, but it may make Fatigue weaker than expected.
 

@@ -32,10 +32,14 @@ Fatigue is not finalized.
 Current testing recommendation:
 
 ```txt
-Valid allied piece = an allied non-King piece within the attacker's legal attack range from its original square.
+Valid allied piece = an allied non-King piece inside the 3x3 area centered on the attacker.
 ```
 
-This is the recommended first test option because it keeps Fatigue positional and gives players counterplay through spacing.
+This is the recommended first test option because it keeps Fatigue positional, readable, and focused on crowded formations.
+
+The 3x3 area includes all adjacent orthogonal and diagonal squares around the attacker.
+
+The attacker and the King are not valid redirected targets.
 
 Rejected for now:
 
@@ -47,9 +51,15 @@ Reason:
 - Too hard to control.
 - Too likely to feel unfair.
 
-Still open:
+Rejected for now:
 
-- Whether Fatigue should instead target allied pieces adjacent to the attacker or adjacent to the intended target.
+- Full legal attack-range targeting.
+
+Reason:
+
+- It is more complex.
+- It makes long-range pieces harder to evaluate.
+- It can feel less connected to the idea of fatigue from crowded formations.
 
 ---
 
@@ -119,8 +129,16 @@ The King may use Divine Attack to respond to check if all of the following are t
 - The King does not end the move in check.
 - The target is not the opposing King.
 - Frenzy Phase is not active.
+- The player has not already used Divine Attack as a check response during this match.
 
 This keeps Divine Attack powerful without making it an automatic escape from check.
+
+Design note:
+
+- A random failure chance is not recommended for the default rule.
+- Check response should remain clear and legality-based.
+- If Divine Attack as check response proves too safe, test stricter deterministic limits instead of random failure.
+- The current preferred limit is one Divine Attack check response per player per match.
 
 ---
 

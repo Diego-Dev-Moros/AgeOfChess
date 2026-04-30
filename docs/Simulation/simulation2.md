@@ -10,7 +10,7 @@ Purpose:
 
 - Test Divine Attack pressure.
 - Analyze Divine Attack as a proposed check response.
-- Test Fatigue using the recommended attack-range targeting rule.
+- Test Fatigue using the recommended adjacent 3x3 targeting rule.
 - Test Last Will board occupation.
 - Test Holy Ground death triggers.
 - Reach Frenzy and resolve by checkmate.
@@ -50,7 +50,7 @@ Public / hidden information:
 Fatigue test rule:
 
 ```txt
-Valid allied target = allied non-King piece within the attacker's legal attack range from its original square.
+Valid allied target = allied non-King piece inside the 3x3 area centered on the attacker.
 ```
 
 ---
@@ -202,9 +202,7 @@ Pre-action:
 - Black is affected by Fatigue.
 - Fatigue check triggers and succeeds.
 - Valid allied target check from Knight b4:
-  - Black Pawn d5 is not in Knight range.
-  - Black Bishop e7 is in Knight range from b4? No.
-  - Black Pawn c6 is empty.
+  - No allied non-King piece is adjacent in the 3x3 area centered on b4.
 - No valid allied non-King target exists.
 
 Result:
@@ -243,12 +241,12 @@ Pre-action:
 
 - Fatigue check triggers and succeeds again for test coverage.
 - Valid allied target from b4:
-  - Black Pawn d5 is in Knight attack range from b4.
+  - Black Pawn c5 is adjacent to b4 inside the 3x3 area.
 
 Fatigue redirection:
 
 ```txt
-Black Knight's attack redirects to Black Pawn d5.
+Black Knight's attack redirects to Black Pawn c5.
 ```
 
 Combat:
@@ -289,7 +287,7 @@ Remaining Black non-King pieces gain +1 HP.
 
 System tested:
 
-- Fatigue Option B.
+- Fatigue adjacent 3x3 targeting.
 - Friendly death.
 - Holy Ground trigger.
 
@@ -578,23 +576,24 @@ White wins by checkmate.
 
 ## Fatigue
 
-Fatigue worked better with attack-range targeting than with global random targeting.
+Fatigue worked better with adjacent 3x3 targeting than with global random targeting.
 
 Benefits:
 
 - The player can understand why the allied target was eligible.
 - Positioning matters.
-- Crowded or careless formations are punished.
+- Crowded formations are punished directly.
+- Long-range pieces do not create large hidden danger zones.
 
 Concern:
 
-- It requires legal attack range checks.
-- It may be harder to explain at the table.
+- It may trigger less often than full attack-range targeting.
+- It mostly punishes clustering near the attacker, not all bad attack lanes.
 
 Recommendation:
 
 ```txt
-Keep testing attack-range Fatigue as the primary option.
+Keep testing adjacent 3x3 Fatigue as the primary option.
 ```
 
 ## Divine Attack As Check Response

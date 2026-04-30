@@ -319,7 +319,7 @@ If King attacks twice within 2 turns:
 - Crystal Pieces → -1 HP (except pawns)
 - Cowardice → 15% chance attack fails
 - Immoral → Attack Dice = Defense Dice
-- Fatigue → 5% chance to redirect to a valid allied piece; targeting rule is still under design
+- Fatigue → 5% chance to redirect to a valid allied piece in the attacker's adjacent 3x3 area; targeting rule is still under design
 
 ---
 

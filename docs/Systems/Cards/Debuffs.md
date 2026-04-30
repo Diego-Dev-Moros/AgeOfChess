@@ -154,7 +154,7 @@ Current Debuff cards:
 Open design note:
 
 - Fatigue targeting is not finalized.
-- Recommended first test: redirect only to allied non-King pieces within the attacker's legal attack range from its original square.
+- Recommended first test: redirect only to allied non-King pieces inside the 3x3 area centered on the attacker.
 - See [[Edge_Cases]].
 
 ---

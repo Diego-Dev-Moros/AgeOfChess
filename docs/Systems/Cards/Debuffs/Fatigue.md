@@ -32,8 +32,12 @@ This targeting rule is not final.
 Recommended first test:
 
 ```txt
-Valid allied piece = allied non-King piece within the attacker's legal attack range from its original square.
+Valid allied piece = allied non-King piece inside the 3x3 area centered on the attacker.
 ```
+
+This means Fatigue affects allied pieces adjacent to the attacker, including diagonals.
+
+The attacker itself is not a valid redirected target.
 
 ---
 
@@ -52,13 +56,20 @@ The redirected target must be an allied piece of the attacker.
 Current recommended test target:
 
 - Allied non-King piece
-- Within the attacker's legal attack range from the attacker's original square
+- Adjacent to the attacker inside the 3x3 area centered on the attacker
 - Not the attacking piece
 - Not the King
 
-Alternative still open:
+Rejected for now:
 
-- Allied piece adjacent to the attacker or adjacent to the intended target
+- Any allied piece anywhere on the board
+- Any allied piece in the attacker's full legal attack range
+
+Reason:
+
+- Board-wide targeting is too chaotic.
+- Full attack-range targeting is less intuitive for long-range pieces.
+- A 3x3 area is easier to see and makes crowded formations the core risk.
 
 ---
 
@@ -124,7 +135,7 @@ Before resolving combat:
 Fatigue check triggers.
 
 If Fatigue activates:
-White Bishop's attack is redirected to a random valid White allied non-King piece within the Bishop's legal attack range from its original square.
+White Bishop's attack is redirected to a random valid White allied non-King piece adjacent to the Bishop in the 3x3 area centered on the Bishop.
 
 If no allied piece is valid:
 The attack fails.

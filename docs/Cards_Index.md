@@ -33,7 +33,7 @@
 # Open Card Questions
 
 - Should future special cards support manual activation?
-- Should Fatigue target attack-range allied pieces or adjacent allied pieces?
+- Should Fatigue 3x3 adjacent targeting become final?
 
 See [[Edge_Cases]].
 

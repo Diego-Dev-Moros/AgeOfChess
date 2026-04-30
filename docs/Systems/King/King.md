@@ -587,6 +587,7 @@ The King may use Divine Attack to escape check if:
 - The King does not end the move in check
 - The target is not the opposing King
 - Frenzy Phase is not active
+- The player has not already used Divine Attack as a check response during this match
 
 Example:
 
@@ -627,7 +628,59 @@ Required restrictions:
 4. The target square must not be protected in a way that leaves the King in check.
 5. The target cannot be the opposing King.
 6. Frenzy Phase must not be active.
-7. The move must resolve all current checks, including double check.
+7. Each player may use Divine Attack as a check response only once per match.
+8. The move must resolve all current checks, including double check.
+
+## Once Per Match Limit
+
+Divine Attack as a check response should be limited to one use per player per match.
+
+Reason:
+
+- Repeated Divine check responses can turn Divinity into a recurring escape system.
+- This can make checking the King feel unrewarding.
+- It can extend games by repeatedly neutralizing tactical pressure.
+- It reduces the opponent's ability to convert good positioning into checkmate pressure.
+
+The once-per-match limit keeps the response dramatic:
+
+```txt
+This is an emergency divine intervention, not a standard defensive tool.
+```
+
+Normal Divine Attack outside check response still follows the regular Divinity, Commitment, and Overuse rules.
+
+## Failure Chance Analysis
+
+Adding a random failure chance to Divine Attack as a check response is not recommended for the core rules.
+
+Reason:
+
+- Check response is a legal-state requirement.
+- If the King chooses Divine Attack as its only legal check response and it fails randomly, the game may end because of a die roll rather than because the opponent created an unavoidable checkmate.
+- This weakens the clarity of check and checkmate.
+- It adds randomness to the most important defensive moment in the game.
+
+Design position:
+
+```txt
+Divine Attack as check response should be restricted by legality, Divinity, and one use per match, not by random failure.
+```
+
+Rejected idea:
+
+```txt
+Divine Attack used as a check response has a random failure chance.
+```
+
+This is not recommended for the current design.
+
+If Divine Attack as check response proves too safe, use deterministic restrictions first:
+
+- Keep the once-per-match limit.
+- Increase Divinity cost only for check-response use.
+- Require the King to become committed for longer.
+- Remove the check-response option entirely.
 
 ## Single Check
 
@@ -669,6 +722,8 @@ It should become official only if simulations show that:
 - It does not make Divine King too safe.
 - It creates interesting risk decisions.
 - It remains easy to explain.
+- It does not need a random failure chance to stay balanced.
+- The once-per-match limit prevents repeated escape patterns.
 
 ---
 

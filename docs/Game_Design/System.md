@@ -397,7 +397,7 @@ Purpose:
 
 - 5% chance to redirect to a valid allied piece
 
-Fatigue targeting remains an open design decision. Recommended first test: allied non-King pieces within the attacker's legal attack range.
+Fatigue targeting remains an open design decision. Recommended first test: allied non-King pieces inside the 3x3 area centered on the attacker.
 
 ---
 

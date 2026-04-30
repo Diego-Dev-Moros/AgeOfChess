@@ -336,7 +336,7 @@ The following are unresolved and should not be treated as final rules:
 
 - Whether Divine Attack as a check response becomes official.
 - Whether future special cards should support manual activation.
-- Whether Fatigue targets allied pieces in attack range or adjacent allied pieces.
+- Whether Fatigue 3x3 adjacent targeting becomes final.
 - Whether Demon King begins below -3 or at -3 after balance testing.
 
 ---
