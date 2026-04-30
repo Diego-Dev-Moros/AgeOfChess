@@ -29,8 +29,36 @@ Each player receives:
 - Permanent
 - Non-stackable
 - Bounded effects
-- Visibility and activation timing are still being finalized
-- Cards may be hidden until activated or revealed
+- Secretly active from match start
+- Hidden until first public trigger or reveal
+- Revealed cards remain known
+
+See [[Systems/Cards/Cards_System|Cards System Reference]].
+
+---
+
+# 3.1 ACTIVATION AND REVEAL
+
+Current rule:
+
+```txt
+Cards are secretly active from match start.
+```
+
+This means:
+
+- Each player knows their own Buff and Debuff.
+- The opponent does not know those cards initially.
+- Card effects apply when their trigger occurs.
+- A card is revealed when its effect changes a public outcome or must be checked publicly.
+- Terrain is public before the match and is not hidden.
+
+Examples:
+
+- Cowardice reveals when an attack failure check is made.
+- Stone Pieces reveals when it raises damage.
+- Iron Age reveals when a piece defends with Attack Dice.
+- Crystal Pieces reveals at setup because HP is public.
 
 ---
 

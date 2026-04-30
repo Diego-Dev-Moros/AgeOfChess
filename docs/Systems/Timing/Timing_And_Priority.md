@@ -335,7 +335,7 @@ Time does not interrupt combat once combat has begun.
 The following are unresolved and should not be treated as final rules:
 
 - Whether Divine Attack as a check response becomes official.
-- Whether hidden cards are passive from start, manually activated, or secretly active.
+- Whether future special cards should support manual activation.
 - Whether Fatigue targets allied pieces in attack range or adjacent allied pieces.
 - Whether Demon King begins below -3 or at -3 after balance testing.
 

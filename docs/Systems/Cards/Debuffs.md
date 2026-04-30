@@ -34,13 +34,13 @@ At the start of a match:
 - Debuffs affect all enemy pieces unless the card says otherwise.
 - Debuffs do not stack.
 
-Card visibility and activation timing are not fully finalized.
+Card visibility follows the current card activation rule.
 
-Working direction:
+Current rule:
 
-- Debuffs may start hidden.
+- Debuffs are secretly active from match start.
 - A Debuff is revealed when its effect changes a game outcome or must be checked publicly.
-- Whether Debuffs are passive from the start, manually activated, or secretly active is an open design decision.
+- After reveal, the Debuff remains known.
 
 See [[Systems/Cards/Cards_System|Cards System Reference]] and [[Edge_Cases]].
 

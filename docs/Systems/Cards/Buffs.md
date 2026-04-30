@@ -35,13 +35,13 @@ At the start of a match:
 - Buffs do not stack.
 - A player cannot have duplicate Buff effects.
 
-Card visibility and activation timing are not fully finalized.
+Card visibility follows the current card activation rule.
 
-Working direction:
+Current rule:
 
-- Buffs may start hidden.
+- Buffs are secretly active from match start.
 - A Buff is revealed when its effect changes a game outcome or must be checked publicly.
-- Whether Buffs are passive from the start, manually activated, or secretly active is an open design decision.
+- After reveal, the Buff remains known.
 
 See [[Systems/Cards/Cards_System|Cards System Reference]] and [[Edge_Cases]].
 

@@ -26,6 +26,24 @@ Every simulation must aim to test at least one of:
 
 ---
 
+# 2.1 Current Simulation Set
+
+Current simulations:
+
+- [[simulation1]] - Balanced system validation
+- [[simulation2]] - King, Fatigue, Last Will, and Holy Ground interaction test
+- [[simulation3]] - Dirty Play, probability cap, King overuse, and time victory stress test
+
+These simulations use the current rules ecosystem:
+
+- [[Timing_And_Priority]]
+- [[Edge_Cases]]
+- [[Systems/Cards/Cards_System|Cards System Reference]]
+- [[Frenzy_Phase]]
+- [[Time_System]]
+
+---
+
 # 3. SIMULATION STRUCTURE
 
 Each simulation must follow this format:
@@ -313,17 +331,54 @@ A good simulation:
 
 ---
 
-# 11. OUTPUT FORMAT
+# 11. CURRENT FINDINGS FROM SIMULATION SET
 
-Each simulation should be saved as:
+The current three simulations suggest:
 
-- simulation_1.md
-- simulation_2.md
-- etc.
+## Combat
+
+- The combat system produces readable outcomes when timing is explicit.
+- Stone Pieces creates strong consistency and should be monitored.
+- Equal Conditions limits high-dice dominance without making stronger pieces useless.
+
+## King System
+
+- Commitment works if check response has priority.
+- Divine Attack must remain movement-legal.
+- Divine Attack as a check response should remain proposed until more tests confirm it does not weaken check tactics too much.
+- Demon King is unlikely to occur in normal play without future effects that push Divinity below 0.
+
+## Cards
+
+- Secretly active cards with reveal-on-trigger works for the current passive card set.
+- Crystal Pieces should reveal at setup because HP is public.
+- Cowardice and Dirty Play require the 20% probability cap.
+
+## Fatigue
+
+- Attack-range Fatigue is more strategic than global random targeting.
+- It creates positioning counterplay.
+- It may be weaker when no valid allied target exists, because the result becomes a failed attack instead of damage.
+
+## Frenzy
+
+- Frenzy cleanly removes randomness.
+- Games ending by checkmate feel stronger than games ending by material count.
+- If many playtests end by time victory, combat pace or Frenzy duration may need adjustment.
 
 ---
 
-# 12. FINAL NOTE
+# 12. OUTPUT FORMAT
+
+Each simulation should be saved as:
+
+- simulation1.md
+- simulation2.md
+- simulation3.md
+
+---
+
+# 13. FINAL NOTE
 
 Simulations are not stories.
 

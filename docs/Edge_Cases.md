@@ -165,28 +165,27 @@ When Frenzy begins:
 
 # 10. Hidden Card Timing
 
-Card visibility is partially unresolved.
+Card visibility is defined for the current card ecosystem.
 
-Current intended structure:
+Current lifecycle:
 
 1. Card selection
 2. Hidden state
-3. Activation or reveal
-4. Active effect
-5. Expiration, if applicable
+3. Secret activation from match start
+4. Public reveal when triggered
+5. Active revealed state
+6. Expiration, if applicable
 
-Known rule:
+Current rule:
 
+- Current Buffs and Debuffs are secretly active from match start.
+- A card reveals when its effect changes a public outcome or must be checked publicly.
+- Crystal Pieces reveals at setup because HP values are public.
 - Terrain is public before the match begins.
 
-Open questions:
+Future open question:
 
-- Are Buffs and Debuffs passive from the start?
-- Are they manually activated?
-- Are they secretly active while face down?
-- Do hidden rules apply to all Buffs and Debuffs or only future special card types?
-
-Until resolved, card documents should mark hidden timing as an open design decision.
+- Should future special card types include manual activation?
 
 ---
 

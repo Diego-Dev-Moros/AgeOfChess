@@ -286,7 +286,8 @@ If King attacks twice within 2 turns:
 ## 10.1 Rules
 
 - Each player receives 1 random buff at start
-- Buff visibility and activation timing are still being defined
+- Buffs are secretly active from match start
+- Buffs reveal when their effect changes a public outcome
 - Buffs do not stack
 
 ---
@@ -307,6 +308,8 @@ If King attacks twice within 2 turns:
 ## 11.1 Rules
 
 - Each player receives 1 debuff affecting opponent
+- Debuffs are secretly active from match start
+- Debuffs reveal when their effect changes a public outcome or requires a public check
 - Probability effects capped at 20%
 
 ---

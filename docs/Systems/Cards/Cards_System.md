@@ -56,12 +56,13 @@ They should change decisions without replacing board strategy.
 
 # 5. Card Visibility
 
-Current intended direction:
+Current rule:
 
 - Each player sees only their own selected cards.
 - The opponent does not see those cards initially.
-- Cards remain hidden until activated or revealed.
-- Once activated or revealed, the card becomes known.
+- Current Buffs and Debuffs are secretly active from match start.
+- Cards remain hidden until their first public trigger or reveal.
+- Once revealed, the card remains known.
 
 Terrain is different:
 
@@ -73,83 +74,44 @@ Terrain is different:
 
 # 6. Card Lifecycle
 
-The intended card lifecycle is:
+Current card lifecycle:
 
 1. Card selection
 2. Hidden state
-3. Activation or reveal
-4. Active effect
-5. Expiration, if applicable
+3. Secret activation from match start
+4. Public reveal when triggered
+5. Active revealed state
+6. Expiration, if applicable
 
-Most current cards are designed as match-long effects, but the hidden/reveal model is not fully finalized.
+Current cards are passive match-long effects.
+
+They are active from match start, but hidden until their effect must be revealed.
 
 ---
 
-# 7. Open Card Timing Decision
+# 7. Card Activation Rule
 
-The following is unresolved:
+Default rule:
 
 ```txt
-Are Buffs and Debuffs passive from the start, manually activated, or secretly active while face down?
+Cards are secretly active from match start.
 ```
 
-Do not treat this as finalized in implementation documentation.
+This means:
 
-Design options:
+- The owner knows their own cards.
+- The opponent does not know those cards at match start.
+- Card effects apply immediately if their trigger occurs.
+- A card is revealed the first time its effect changes a public outcome or must be checked publicly.
+- After reveal, the card remains known.
 
-## Option A - Passive From Start
-
-Cards are always active from match start.
-
-Pros:
-
-- Simple.
-- Easy to balance.
-- Low memory burden.
-
-Cons:
-
-- Hidden cards become difficult to justify.
-- Opponent may experience invisible effects before understanding why.
-
-## Option B - Manually Activated
-
-Cards have no effect until the owner activates or reveals them.
-
-Pros:
-
-- Strong player agency.
-- Clear reveal moment.
-- Easier for opponent to understand.
-
-Cons:
-
-- Requires activation rules.
-- Current passive cards need redesign.
-
-## Option C - Secretly Active
-
-Cards are active from the start but remain hidden until they visibly affect play.
-
-Pros:
-
-- Preserves surprise.
-- Keeps existing passive designs mostly intact.
-
-Cons:
-
-- Can feel unfair if hidden effects change outcomes.
-- Requires clear reveal triggers.
-
-Recommended next step:
-
-- Test Option C for passive cards, but mark it as provisional.
+This rule is used because the current Buffs and Debuffs are mostly passive effects.
 
 ---
 
 # 8. Reveal Timing
 
-Provisional reveal rule:
+Reveal rule:
 
 ```txt
 A hidden card is revealed the first time its effect changes a game outcome or must be checked publicly.
@@ -157,16 +119,47 @@ A hidden card is revealed the first time its effect changes a game outcome or mu
 
 Examples:
 
-- Cowardice reveals when an attack failure roll is checked.
+- Cowardice reveals when an attack failure check is made.
 - Stone Pieces reveals when damage is raised to 2.
 - Iron Age reveals when a piece defends with Attack Dice.
-- Crystal Pieces may need to reveal at match start if HP is public.
-
-This rule requires further design validation.
+- Last Will reveals when a dying piece deals retaliation damage.
+- Fatigue reveals when a redirection or failed redirection check occurs.
+- Crystal Pieces reveals at setup because HP values are public.
 
 ---
 
-# 9. Card Restrictions
+# 9. Manual Activation
+
+Current cards do not require manual activation.
+
+Future cards may use manual activation, but they must explicitly say:
+
+- Activation timing
+- Valid targets
+- Duration
+- Reveal timing
+- Whether the effect can be used during Frenzy
+
+---
+
+# 10. Design Risk
+
+Secretly active cards can create surprise, but they must stay readable.
+
+Risk:
+
+- The opponent may feel punished by an invisible rule.
+
+Controls:
+
+- Reveal immediately when the card changes an outcome.
+- Keep probability effects capped.
+- Keep terrain public.
+- Keep Frenzy deterministic.
+
+---
+
+# 11. Card Restrictions
 
 Cards do not affect by default:
 
@@ -179,13 +172,13 @@ Cards may only affect those systems if a card explicitly says so.
 
 ---
 
-# 10. Timing Reference
+# 12. Timing Reference
 
 Card timing must follow [[Timing_And_Priority]].
 
 General timing:
 
-1. Check whether the card is active or hidden.
+1. Check whether the card is hidden or revealed.
 2. Check whether the trigger condition occurs.
 3. Reveal the card if required.
 4. Apply the effect at the correct timing step.
@@ -194,7 +187,7 @@ General timing:
 
 ---
 
-# 11. Global Caps
+# 13. Global Caps
 
 | Constraint | Limit |
 | --- | --- |
@@ -207,13 +200,12 @@ General timing:
 
 ---
 
-# 12. Open Questions
+# 14. Open Questions
 
-- Are all current Buffs and Debuffs hidden?
-- Are hidden cards secretly active?
-- Does Crystal Pieces reveal immediately because HP values are visible?
 - Should future cards be split into Passive, Triggered, and Active types?
+- Should future special cards support manual activation?
 - Should Debuffs reveal to the affected player before their first relevant action?
+- Should Crystal Pieces always reveal at setup in physical play, or only in digital play where HP is displayed?
 
 ---
 

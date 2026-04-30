@@ -55,7 +55,7 @@ Age of Chess is a tactical chess variant where classical movement remains intact
 
 - Demon King threshold requires balance testing.
 - Fatigue targeting is not finalized.
-- Hidden card activation timing is not finalized.
+- Current cards are secretly active from match start and reveal on first public trigger.
 - Divine Attack as check response is proposed, not official.
 
 See [[Edge_Cases]].

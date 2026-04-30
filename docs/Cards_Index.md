@@ -32,8 +32,7 @@
 
 # Open Card Questions
 
-- Are cards passive from the start, manually activated, or secretly active while hidden?
-- Should hidden card timing apply to all Buffs and Debuffs?
+- Should future special cards support manual activation?
 - Should Fatigue target attack-range allied pieces or adjacent allied pieces?
 
 See [[Edge_Cases]].

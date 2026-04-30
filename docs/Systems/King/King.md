@@ -605,7 +605,74 @@ This rule should remain in system documentation until confirmed for the official
 
 ---
 
-# 32. King and Frenzy Phase
+# 32. Design Analysis: Divine Attack as Check Response
+
+Divine Attack as a check response is powerful because it can convert a defensive emergency into material removal.
+
+If implemented without restrictions, it creates major risks:
+
+- Long-range checks become weaker.
+- Queen, rook, and bishop pressure against the King loses value.
+- Divinity becomes a universal escape shield.
+- Checkmate patterns become harder to read.
+- The King may become safer when it has Divinity, which goes against the risk-based design of the system.
+
+The proposed version avoids those problems by treating Divine Attack as a legal King move with instant removal, not as a ranged spell.
+
+Required restrictions:
+
+1. The King must have Divinity greater than 0.
+2. The target must be the checking piece.
+3. The King must be able to legally move to the target square.
+4. The target square must not be protected in a way that leaves the King in check.
+5. The target cannot be the opposing King.
+6. Frenzy Phase must not be active.
+7. The move must resolve all current checks, including double check.
+
+## Single Check
+
+If one enemy piece gives check, Divine Attack may be valid if the King can legally move to that piece and be safe afterward.
+
+Example:
+
+```txt
+Enemy Knight checks the King from an adjacent legal King destination.
+King has Divinity.
+The Knight's square is not protected.
+
+The proposed rule would allow Divine Attack.
+```
+
+## Long-Range Check
+
+If a rook, bishop, or queen gives check from far away, Divine Attack is usually not valid unless the King can legally move to that square.
+
+This preserves the value of long-range pressure.
+
+## Double Check
+
+If two pieces give check at the same time, Divine Attack only works if removing one checking piece and moving to its square also resolves the other check.
+
+If the second check remains active, the Divine Attack is illegal.
+
+## Design Recommendation
+
+Current recommendation:
+
+```txt
+Keep Divine Attack as check response proposed, not official.
+```
+
+It should become official only if simulations show that:
+
+- It does not erase long-range check tactics.
+- It does not make Divine King too safe.
+- It creates interesting risk decisions.
+- It remains easy to explain.
+
+---
+
+# 33. King and Frenzy Phase
 
 During Frenzy Phase:
 
@@ -619,7 +686,7 @@ The King cannot use Divinity during Frenzy unless a special rule explicitly allo
 
 ---
 
-# 33. King and Buffs
+# 34. King and Buffs
 
 Default rule:
 
@@ -631,7 +698,7 @@ Future King-specific Buffs may exist, but they must be reviewed carefully.
 
 ---
 
-# 34. King and Debuffs
+# 35. King and Debuffs
 
 Default rule:
 
@@ -643,7 +710,7 @@ Future King-specific Debuffs may exist, but they must not make checkmate automat
 
 ---
 
-# 35. King and Terrain
+# 36. King and Terrain
 
 Default rule:
 
@@ -656,7 +723,7 @@ Future King-related Terrain effects should be rare and strongly bounded.
 
 ---
 
-# 36. King and Allied Army
+# 37. King and Allied Army
 
 The King’s Divinity state can affect allied pieces.
 
@@ -671,7 +738,7 @@ Using the King recklessly can weaken the entire army.
 
 ---
 
-# 37. Strategic Role of the King
+# 38. Strategic Role of the King
 
 The King can be used as:
 
@@ -687,7 +754,7 @@ A Divine Attack should always create a meaningful decision.
 
 ---
 
-# 38. Strategic Questions for the Player
+# 39. Strategic Questions for the Player
 
 Before using Divine Attack, the player should ask:
 
@@ -700,7 +767,7 @@ Before using Divine Attack, the player should ask:
 
 ---
 
-# 39. Example 1 — Basic Divine Attack
+# 40. Example 1 — Basic Divine Attack
 
 ```txt
 White King has 3 Divinity.
@@ -716,7 +783,7 @@ White King cannot move on White’s next turn.
 
 ---
 
-# 40. Example 2 — Reaching Thorn King
+# 41. Example 2 — Reaching Thorn King
 
 ```txt
 Black King starts with 3 Divinity.
@@ -737,7 +804,7 @@ Black King can no longer attack.
 
 ---
 
-# 41. Example 3 — Overuse Penalty
+# 42. Example 3 — Overuse Penalty
 
 ```txt
 White King performs a Divine Attack.
@@ -757,7 +824,7 @@ White King loses 2 Divinity total from the second aggressive sequence.
 
 ---
 
-# 42. Example 4 — Corrupted King
+# 43. Example 4 — Corrupted King
 
 ```txt
 Black King reaches Divinity -2.
@@ -771,7 +838,7 @@ When Black pieces attack, they have a 10% chance to fail before rolling dice.
 
 ---
 
-# 43. Example 5 — Demon King
+# 44. Example 5 — Demon King
 
 ```txt
 White King reaches Divinity -4.
@@ -785,7 +852,7 @@ White pieces are now extremely fragile.
 
 ---
 
-# 44. Balance Notes
+# 45. Balance Notes
 
 The King is powerful because:
 
@@ -804,7 +871,7 @@ The King is balanced because:
 
 ---
 
-# 45. Design Risks
+# 46. Design Risks
 
 Potential risks:
 
@@ -815,7 +882,7 @@ Potential risks:
 
 ---
 
-# 46. Design Guidelines for Future King Mechanics
+# 47. Design Guidelines for Future King Mechanics
 
 Any future King-related mechanic must answer:
 
@@ -829,7 +896,7 @@ Any future King-related mechanic must answer:
 
 ---
 
-# 47. Summary
+# 48. Summary
 
 The King System is based on one central idea:
 
