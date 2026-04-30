@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://age_of_chess_main"]
+
+[ext_resource type="Script" path="res://managers/GameManager.gd" id="1"]
+[ext_resource type="Script" path="res://systems/Board.gd" id="2"]
+[ext_resource type="Script" path="res://ui/MatchUI.gd" id="3"]
+
+[node name="Main" type="Node"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1")
+board_path = NodePath("../World/Board")
+ui_path = NodePath("../UI/MatchUI")
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Board" type="Node2D" parent="World"]
+position = Vector2(96, 96)
+script = ExtResource("2")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="MatchUI" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3")

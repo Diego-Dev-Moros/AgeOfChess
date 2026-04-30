@@ -1,0 +1,3 @@
+res://systems/Board.gd
+res://ui/MatchUI.gd
+res://managers/GameManager.gd
