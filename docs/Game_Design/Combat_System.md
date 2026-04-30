@@ -4,6 +4,12 @@ System reference: [[Systems/Combat/Combat_Flow|Combat_Flow]]
 
 Timing reference: [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]]
 
+Visual design references:
+
+- [[Assets_Design/Dice_Design|Dice Design]]
+- [[Assets_Design/Dice/Dice_Index|Dice Asset Design Index]]
+- [[Assets_Design/UI_Design|UI Design]]
+
 ---
 
 # 1. PURPOSE

@@ -172,4 +172,15 @@ Controls:
 
 ---
 
+# 17. Related Documentation
+
+- [[Systems/Terrain/Terrain|Terrain System]]
+- [[Game_Design/Pieces_System|Pieces System]]
+- [[Systems/Combat/Damage_Calculation|Damage Calculation]]
+- [[Balancing/Balance|Balance]]
+- [[Assets_Design/Cards/Terrains/Holy_Ground|Holy Ground Asset]]
+- [[Design_Node_Map]]
+
+---
+
 END

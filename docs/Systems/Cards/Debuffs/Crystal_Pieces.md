@@ -113,4 +113,16 @@ Controls:
 
 ---
 
+# 13. Related Documentation
+
+- [[Systems/Cards/Debuffs|Debuffs]]
+- [[Systems/Cards/Cards_System|Cards System Reference]]
+- [[Game_Design/Pieces_System|Pieces System]]
+- [[Systems/Combat/Damage_Calculation|Damage Calculation]]
+- [[Balancing/Card_Balance|Card Balance]]
+- [[Assets_Design/Cards/Debuffs/Crystal_Pieces|Crystal Pieces Asset]]
+- [[Design_Node_Map]]
+
+---
+
 END

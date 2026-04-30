@@ -8,6 +8,18 @@ Chess pieces are the primary gameplay units.
 
 Their silhouettes must be immediately readable on every terrain and at every supported gameplay scale.
 
+Design node connections:
+
+- [[Design_Node_Map]]
+- [[Assets_Design/Pieces/Pieces_Index|Pieces Asset Design Index]]
+- [[Game_Design/Pieces_System|Pieces System]]
+- [[Systems/Combat/Combat_Flow|Combat Flow]]
+- [[Systems/Combat/Damage_Calculation|Damage Calculation]]
+- [[Systems/King/King|King System]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy Phase]]
+- [[Art_Direction/Pixel_Standards|Pixel Standards]]
+- [[Art_Direction/Color_Palette|Color Palette]]
+
 ---
 
 # 2. Gameplay Role

@@ -6,6 +6,13 @@
 
 Define the visual asset rules for the Equal Conditions Terrain card.
 
+Game design connections:
+
+- [[Systems/Terrain/Equal_Conditions|Equal Conditions Rules]]
+- [[Systems/Terrain/Terrain|Terrain System]]
+- [[Systems/Combat/Dice_System|Dice System]]
+- [[Balancing/Combat_Probabilities|Combat Probabilities]]
+
 ---
 
 # 2. Gameplay Role

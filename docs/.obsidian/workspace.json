@@ -178,6 +178,8 @@
   },
   "active": "4e8b8719d1b051f6",
   "lastOpenFiles": [
+    "Assets_Design/Assets_Design_Index.md",
+    "Design_Node_Map.md",
     "Assets_Design/Dice/Dice_Index.md",
     "Assets_Design/UI/UI_Index.md",
     "Assets_Design/Board/Board_Index.md",
@@ -202,8 +204,6 @@
     "Assets_Design/Cards/Terrains/Equal_Conditions.md",
     "Assets_Design/Cards/Debuffs/Immoral.md",
     "Assets_Design/Cards/Debuffs/Fatigue.md",
-    "Assets_Design/Cards/Debuffs/Crystal_Pieces.md",
-    "Assets_Design/Cards/Debuffs/Cowardice.md",
     "Assets_Design/Dice",
     "Assets_Design/UI",
     "Assets_Design/Board",

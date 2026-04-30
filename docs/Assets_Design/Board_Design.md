@@ -8,6 +8,18 @@ The board is the tactical play surface.
 
 Its main job is clarity, not spectacle.
 
+Design node connections:
+
+- [[Design_Node_Map]]
+- [[Assets_Design/Board/Board_Index|Board Asset Design Index]]
+- [[Assets_Design/Board/Board|Board Asset]]
+- [[Game_Design/Rules|Rules]]
+- [[Game_Design/Turn_System|Turn System]]
+- [[Systems/Terrain/Terrain|Terrain System]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy Phase]]
+- [[Art_Direction/Pixel_Standards|Pixel Standards]]
+- [[Art_Direction/Color_Palette|Color Palette]]
+
 ---
 
 # 2. Gameplay Role

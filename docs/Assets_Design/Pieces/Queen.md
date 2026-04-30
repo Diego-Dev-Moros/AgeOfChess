@@ -12,6 +12,13 @@ Define the visual asset rules for the Queen sprite.
 
 The Queen is the most flexible and dangerous non-King piece.
 
+Game design connections:
+
+- [[Game_Design/Pieces_System|Pieces System]]
+- [[Systems/Combat/Combat_Flow|Combat Flow]]
+- [[Systems/Combat/Damage_Calculation|Damage Calculation]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy Phase]]
+
 ---
 
 # 3. Visual Concept

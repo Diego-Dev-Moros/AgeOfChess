@@ -1,5 +1,12 @@
 # ♟️ AGE OF CHESS — OFFICIAL RULES
 
+Visual design references:
+
+- [[Design_Node_Map]]
+- [[Assets_Design/Assets_Design_Index|Assets Design Index]]
+- [[Assets_Design/Board_Design|Board Design]]
+- [[Assets_Design/UI_Design|UI Design]]
+
 ---
 
 # 1. OVERVIEW

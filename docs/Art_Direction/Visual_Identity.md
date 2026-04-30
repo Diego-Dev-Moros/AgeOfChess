@@ -68,4 +68,15 @@ For example, a buffed dark knight should first read as a knight, then as dark fa
 
 ---
 
+# 5. Related Documentation
+
+- [[Art_Direction/Art_Direction_Index|Art Direction Index]]
+- [[Art_Direction/Style_Guide|Style Guide]]
+- [[Art_Direction/Color_Palette|Color Palette]]
+- [[Assets_Design/Assets_Design_Index|Assets Design Index]]
+- [[Game_Design/System|System]]
+- [[Design_Node_Map]]
+
+---
+
 END

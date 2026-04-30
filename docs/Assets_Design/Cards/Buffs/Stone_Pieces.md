@@ -6,6 +6,13 @@
 
 Define the visual asset rules for the Stone Pieces Buff card.
 
+Game design connections:
+
+- [[Systems/Cards/Buffs/Stone_Pieces|Stone Pieces Rules]]
+- [[Systems/Cards/Buffs|Buffs]]
+- [[Systems/Combat/Damage_Calculation|Damage Calculation]]
+- [[Balancing/Card_Balance|Card Balance]]
+
 ---
 
 # 2. Gameplay Role

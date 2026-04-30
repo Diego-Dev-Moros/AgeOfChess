@@ -187,4 +187,15 @@ Controls:
 
 ---
 
+# 17. Related Documentation
+
+- [[Systems/Terrain/Terrain|Terrain System]]
+- [[Systems/Combat/Damage_Calculation|Damage Calculation]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy Phase]]
+- [[Balancing/Balance|Balance]]
+- [[Assets_Design/Cards/Terrains/Hell|Hell Asset]]
+- [[Design_Node_Map]]
+
+---
+
 END

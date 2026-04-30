@@ -12,6 +12,14 @@ Define the visual asset rules for the King sprite.
 
 The King is the central win-condition piece and must be recognized instantly.
 
+Game design connections:
+
+- [[Systems/King/King|King System]]
+- [[Game_Design/King_System|King System Overview]]
+- [[Game_Design/Rules|Rules]]
+- [[Edge_Cases]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy Phase]]
+
 ---
 
 # 3. Visual Concept

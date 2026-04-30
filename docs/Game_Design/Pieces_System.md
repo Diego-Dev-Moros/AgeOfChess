@@ -1,5 +1,10 @@
 # PIECES SYSTEM
 
+Visual design references:
+
+- [[Assets_Design/Pieces_Design|Pieces Design]]
+- [[Assets_Design/Pieces/Pieces_Index|Pieces Asset Design Index]]
+
 ---
 
 # 1. OVERVIEW

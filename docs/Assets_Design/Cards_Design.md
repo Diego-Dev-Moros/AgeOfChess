@@ -8,6 +8,18 @@ Cards communicate hidden or public rule modifiers through a collectible fantasy 
 
 They carry the richest visual detail in the project because players can inspect them outside the dense board grid.
 
+Design node connections:
+
+- [[Design_Node_Map]]
+- [[Assets_Design/Cards/Cards_Index|Cards Asset Design Index]]
+- [[Systems/Cards/Cards_System|Cards System Reference]]
+- [[Systems/Cards/Buffs|Buffs]]
+- [[Systems/Cards/Debuffs|Debuffs]]
+- [[Systems/Terrain/Terrain|Terrain System]]
+- [[Balancing/Card_Balance|Card Balance]]
+- [[Art_Direction/Style_Guide|Style Guide]]
+- [[Art_Direction/Color_Palette|Color Palette]]
+
 ---
 
 # 2. Gameplay Role

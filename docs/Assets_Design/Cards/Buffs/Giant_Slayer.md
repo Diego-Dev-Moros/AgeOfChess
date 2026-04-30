@@ -6,6 +6,12 @@
 
 Define the visual asset rules for the Giant Slayer Buff card.
 
+Game design connections:
+
+- [[Systems/Cards/Buffs/Giant_Slayer|Giant Slayer Rules]]
+- [[Systems/Cards/Buffs|Buffs]]
+- [[Balancing/Card_Balance|Card Balance]]
+
 ---
 
 # 2. Gameplay Role

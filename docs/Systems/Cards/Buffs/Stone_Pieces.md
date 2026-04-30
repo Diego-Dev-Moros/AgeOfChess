@@ -139,4 +139,16 @@ Controls:
 
 ---
 
+# 13. Related Documentation
+
+- [[Systems/Cards/Buffs|Buffs]]
+- [[Systems/Cards/Cards_System|Cards System Reference]]
+- [[Systems/Combat/Damage_Calculation|Damage Calculation]]
+- [[Edge_Cases]]
+- [[Balancing/Card_Balance|Card Balance]]
+- [[Assets_Design/Cards/Buffs/Stone_Pieces|Stone Pieces Asset]]
+- [[Design_Node_Map]]
+
+---
+
 END

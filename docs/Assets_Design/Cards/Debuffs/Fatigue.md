@@ -6,6 +6,13 @@
 
 Define the visual asset rules for the Fatigue Debuff card.
 
+Game design connections:
+
+- [[Systems/Cards/Debuffs/Fatigue|Fatigue Rules]]
+- [[Systems/Cards/Debuffs|Debuffs]]
+- [[Edge_Cases]]
+- [[Balancing/Card_Balance|Card Balance]]
+
 ---
 
 # 2. Gameplay Role

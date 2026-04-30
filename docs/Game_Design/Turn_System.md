@@ -8,6 +8,12 @@ The Turn System defines how a player's action is declared, validated, resolved, 
 
 For detailed timing, use [[Systems/Timing/Timing_And_Priority|Timing_And_Priority]] as the source of truth.
 
+Visual design references:
+
+- [[Assets_Design/UI_Design|UI Design]]
+- [[Assets_Design/UI/UI_Index|UI Asset Design Index]]
+- [[Assets_Design/Board_Design|Board Design]]
+
 ---
 
 # 2. Turn Structure

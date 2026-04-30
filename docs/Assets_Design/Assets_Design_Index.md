@@ -21,6 +21,7 @@ All assets must follow the standards defined in:
 - [[Art_Direction/Lighting_and_Shading|Lighting and Shading]]
 - [[Art_Direction/Visual_Identity|Visual Identity]]
 - [[Art_Direction/Pixel_Standards|Pixel Standards]]
+- [[Design_Node_Map]]
 
 ---
 
@@ -76,6 +77,14 @@ Assets_Design/
 
 # 4. Asset Navigation
 
+## General Asset Design
+
+- [[Assets_Design/Pieces_Design|Pieces Design]]
+- [[Assets_Design/Board_Design|Board Design]]
+- [[Assets_Design/Cards_Design|Cards Design]]
+- [[Assets_Design/Dice_Design|Dice Design]]
+- [[Assets_Design/UI_Design|UI Design]]
+
 ## Cards
 
 - [[Assets_Design/Cards/Buffs/Buffs_Assets_Index|Buff Cards Asset Index]]
@@ -106,10 +115,25 @@ No asset should be approved only because it looks good in isolation.
 Every asset must be checked against:
 
 - Gameplay readability.
+- Linked gameplay rules.
 - Shared palette.
 - Shared top-left lighting.
 - Pixel scale.
 - Compatibility with board, cards, UI, and pieces.
+
+---
+
+# 6. Gameplay Connection Rule
+
+Every asset file should link back to the gameplay system it represents.
+
+Use [[Design_Node_Map]] to verify that:
+
+- Piece assets connect to [[Game_Design/Pieces_System|Pieces System]] or [[Systems/King/King|King System]].
+- Card assets connect to their matching Buff, Debuff, or Terrain rule.
+- Board assets connect to [[Game_Design/Rules|Rules]] and [[Systems/Terrain/Terrain|Terrain System]].
+- Dice assets connect to [[Systems/Combat/Dice_System|Dice System]].
+- UI assets connect to [[Systems/Timing/Timing_And_Priority|Timing And Priority]].
 
 ---
 

@@ -6,6 +6,13 @@
 
 Define the visual asset rules for the Cowardice Debuff card.
 
+Game design connections:
+
+- [[Systems/Cards/Debuffs/Cowardice|Cowardice Rules]]
+- [[Systems/Cards/Debuffs|Debuffs]]
+- [[Systems/Timing/Timing_And_Priority|Timing And Priority]]
+- [[Balancing/Card_Balance|Card Balance]]
+
 ---
 
 # 2. Gameplay Role

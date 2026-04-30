@@ -1,5 +1,11 @@
 # AGE OF CHESS — CORE SYSTEM DESIGN
 
+Visual design references:
+
+- [[Design_Node_Map]]
+- [[Art_Direction/Art_Direction_Index|Art Direction Index]]
+- [[Assets_Design/Assets_Design_Index|Assets Design Index]]
+
 ---
 
 # 1. DESIGN PHILOSOPHY

@@ -6,6 +6,12 @@
 
 Define the visual asset rules for the Iron Age Buff card.
 
+Game design connections:
+
+- [[Systems/Cards/Buffs/Iron_Age|Iron Age Rules]]
+- [[Systems/Cards/Buffs|Buffs]]
+- [[Balancing/Card_Balance|Card Balance]]
+
 ---
 
 # 2. Gameplay Role

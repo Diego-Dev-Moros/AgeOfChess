@@ -6,6 +6,13 @@
 
 Define the visual asset rules for the Will Terrain card.
 
+Game design connections:
+
+- [[Systems/Terrain/Will|Will Rules]]
+- [[Systems/Terrain/Terrain|Terrain System]]
+- [[Systems/Combat/Damage_Calculation|Damage Calculation]]
+- [[Balancing/Combat_Probabilities|Combat Probabilities]]
+
 ---
 
 # 2. Gameplay Role

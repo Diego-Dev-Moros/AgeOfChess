@@ -6,6 +6,18 @@
 
 Dice visualize combat uncertainty and must make roll results immediately readable.
 
+Design node connections:
+
+- [[Design_Node_Map]]
+- [[Assets_Design/Dice/Dice_Index|Dice Asset Design Index]]
+- [[Assets_Design/Dice/Dice|Dice Asset]]
+- [[Systems/Combat/Dice_System|Dice System]]
+- [[Systems/Combat/Combat_Flow|Combat Flow]]
+- [[Systems/Combat/Damage_Calculation|Damage Calculation]]
+- [[Systems/Timing/Timing_And_Priority|Timing And Priority]]
+- [[Art_Direction/Pixel_Standards|Pixel Standards]]
+- [[Art_Direction/Color_Palette|Color Palette]]
+
 ---
 
 # 2. Gameplay Role

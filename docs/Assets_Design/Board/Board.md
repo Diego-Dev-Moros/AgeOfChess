@@ -6,6 +6,13 @@
 
 Define the visual asset rules for the Age of Chess board.
 
+Game design connections:
+
+- [[Game_Design/Rules|Rules]]
+- [[Game_Design/Turn_System|Turn System]]
+- [[Systems/Terrain/Terrain|Terrain System]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy Phase]]
+
 ---
 
 # 2. Gameplay Role

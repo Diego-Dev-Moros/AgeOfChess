@@ -4,6 +4,11 @@ System reference: [[Systems/Cards/Cards_System|Cards System Reference]]
 
 Related documents: [[Systems/Cards/Buffs|Buffs]], [[Systems/Cards/Debuffs|Debuffs]], [[Balancing/Card_Balance|Card_Balance]]
 
+Visual design references:
+
+- [[Assets_Design/Cards_Design|Cards Design]]
+- [[Assets_Design/Cards/Cards_Index|Cards Asset Design Index]]
+
 ---
 
 # 1. OVERVIEW

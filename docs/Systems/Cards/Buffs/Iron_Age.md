@@ -123,4 +123,16 @@ Controls:
 
 ---
 
+# 13. Related Documentation
+
+- [[Systems/Cards/Buffs|Buffs]]
+- [[Systems/Cards/Cards_System|Cards System Reference]]
+- [[Systems/Combat/Dice_System|Dice System]]
+- [[Systems/Combat/Combat_Flow|Combat Flow]]
+- [[Balancing/Card_Balance|Card Balance]]
+- [[Assets_Design/Cards/Buffs/Iron_Age|Iron Age Asset]]
+- [[Design_Node_Map]]
+
+---
+
 END

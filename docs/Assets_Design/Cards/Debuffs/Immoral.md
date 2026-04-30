@@ -6,6 +6,13 @@
 
 Define the visual asset rules for the Immoral Debuff card.
 
+Game design connections:
+
+- [[Systems/Cards/Debuffs/Immoral|Immoral Rules]]
+- [[Systems/Cards/Debuffs|Debuffs]]
+- [[Systems/Combat/Dice_System|Dice System]]
+- [[Balancing/Card_Balance|Card Balance]]
+
 ---
 
 # 2. Gameplay Role

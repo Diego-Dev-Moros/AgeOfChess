@@ -1,5 +1,11 @@
 # KING SYSTEM — DIVINITY
 
+Visual design references:
+
+- [[Assets_Design/Pieces/King|King Asset]]
+- [[Assets_Design/Pieces_Design|Pieces Design]]
+- [[Assets_Design/UI_Design|UI Design]]
+
 ---
 
 # 1. OVERVIEW

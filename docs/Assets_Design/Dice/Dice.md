@@ -6,6 +6,13 @@
 
 Define the visual asset rules for dice icons and combat dice.
 
+Game design connections:
+
+- [[Systems/Combat/Dice_System|Dice System]]
+- [[Systems/Combat/Combat_Flow|Combat Flow]]
+- [[Systems/Combat/Damage_Calculation|Damage Calculation]]
+- [[Systems/Timing/Timing_And_Priority|Timing And Priority]]
+
 ---
 
 # 2. Gameplay Role

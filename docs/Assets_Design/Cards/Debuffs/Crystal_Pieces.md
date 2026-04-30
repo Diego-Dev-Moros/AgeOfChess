@@ -6,6 +6,13 @@
 
 Define the visual asset rules for the Crystal Pieces Debuff card.
 
+Game design connections:
+
+- [[Systems/Cards/Debuffs/Crystal_Pieces|Crystal Pieces Rules]]
+- [[Systems/Cards/Debuffs|Debuffs]]
+- [[Systems/Combat/Damage_Calculation|Damage Calculation]]
+- [[Balancing/Card_Balance|Card Balance]]
+
 ---
 
 # 2. Gameplay Role

@@ -18,6 +18,7 @@ Age of Chess is a tactical chess variant where classical movement remains intact
 - [[Balancing_Index]]
 - [[Art_Direction/Art_Direction_Index|Art Direction Index]]
 - [[Assets_Design/Assets_Design_Index|Assets Design Index]]
+- [[Design_Node_Map]]
 - [[Game_Design/Rules|Rules]]
 - [[Game_Design/System|System]]
 - [[Edge_Cases]]
@@ -66,6 +67,7 @@ See [[Edge_Cases]].
 
 # 6. Visual Documentation
 
+- [[Design_Node_Map]]
 - [[Art_Direction/Art_Direction_Index|Art Direction Index]]
 - [[Assets_Design/Assets_Design_Index|Assets Design Index]]
 - [[Assets_Design/Cards/Cards_Index|Cards Asset Design Index]]
@@ -73,6 +75,14 @@ See [[Edge_Cases]].
 - [[Assets_Design/Board/Board_Index|Board Asset Design Index]]
 - [[Assets_Design/UI/UI_Index|UI Asset Design Index]]
 - [[Assets_Design/Dice/Dice_Index|Dice Asset Design Index]]
+
+General asset design nodes:
+
+- [[Assets_Design/Pieces_Design|Pieces Design]]
+- [[Assets_Design/Board_Design|Board Design]]
+- [[Assets_Design/Cards_Design|Cards Design]]
+- [[Assets_Design/Dice_Design|Dice Design]]
+- [[Assets_Design/UI_Design|UI Design]]
 
 ---
 

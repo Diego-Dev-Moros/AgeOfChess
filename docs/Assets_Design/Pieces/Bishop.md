@@ -12,6 +12,13 @@ Define the visual asset rules for the Bishop sprite.
 
 The Bishop represents diagonal pressure and arcane movement.
 
+Game design connections:
+
+- [[Game_Design/Pieces_System|Pieces System]]
+- [[Systems/Combat/Combat_Flow|Combat Flow]]
+- [[Systems/Combat/Damage_Calculation|Damage Calculation]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy Phase]]
+
 ---
 
 # 3. Visual Concept

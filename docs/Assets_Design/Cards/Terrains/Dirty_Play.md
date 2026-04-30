@@ -6,6 +6,13 @@
 
 Define the visual asset rules for the Dirty Play Terrain card.
 
+Game design connections:
+
+- [[Systems/Terrain/Dirty_Play|Dirty Play Rules]]
+- [[Systems/Terrain/Terrain|Terrain System]]
+- [[Systems/Cards/Debuffs/Cowardice|Cowardice Rules]]
+- [[Balancing/Card_Balance|Card Balance]]
+
 ---
 
 # 2. Gameplay Role

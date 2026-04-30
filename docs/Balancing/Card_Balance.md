@@ -575,4 +575,16 @@ Future Card Balance documentation should include:
 
 ---
 
+# 13. Related Documentation
+
+- [[Balancing_Index]]
+- [[Balancing/Balance|Balance]]
+- [[Game_Design/Cards_System|Cards System]]
+- [[Systems/Cards/Cards_System|Cards System Reference]]
+- [[Systems/Cards/Buffs|Buffs]]
+- [[Systems/Cards/Debuffs|Debuffs]]
+- [[Design_Node_Map]]
+
+---
+
 END

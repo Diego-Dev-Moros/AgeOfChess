@@ -1,5 +1,11 @@
 # CORE MECHANICS
 
+Visual design references:
+
+- [[Design_Node_Map]]
+- [[Assets_Design/Assets_Design_Index|Assets Design Index]]
+- [[Art_Direction/Art_Direction_Index|Art Direction Index]]
+
 ---
 
 # 1. OVERVIEW

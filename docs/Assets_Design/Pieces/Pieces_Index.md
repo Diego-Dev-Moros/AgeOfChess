@@ -35,6 +35,23 @@ All piece sprites use:
 - [[Art_Direction/Pixel_Standards|Pixel Standards]]
 - [[Art_Direction/Color_Palette|Color Palette]]
 - [[Game_Design/Pieces_System|Pieces System]]
+- [[Systems/Combat/Combat_Flow|Combat Flow]]
+- [[Systems/Combat/Damage_Calculation|Damage Calculation]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy Phase]]
+- [[Design_Node_Map]]
+
+---
+
+# 4. Gameplay Connections
+
+| Piece Asset | Core Gameplay References |
+| --- | --- |
+| [[Assets_Design/Pieces/Pawn|Pawn Asset]] | [[Game_Design/Pieces_System|Pieces System]], [[Systems/Combat/Combat_Flow|Combat Flow]] |
+| [[Assets_Design/Pieces/Knight|Knight Asset]] | [[Game_Design/Pieces_System|Pieces System]], [[Systems/Combat/Combat_Flow|Combat Flow]] |
+| [[Assets_Design/Pieces/Bishop|Bishop Asset]] | [[Game_Design/Pieces_System|Pieces System]], [[Systems/Combat/Combat_Flow|Combat Flow]] |
+| [[Assets_Design/Pieces/Rook|Rook Asset]] | [[Game_Design/Pieces_System|Pieces System]], [[Systems/Combat/Combat_Flow|Combat Flow]] |
+| [[Assets_Design/Pieces/Queen|Queen Asset]] | [[Game_Design/Pieces_System|Pieces System]], [[Systems/Combat/Combat_Flow|Combat Flow]] |
+| [[Assets_Design/Pieces/King|King Asset]] | [[Systems/King/King|King System]], [[Game_Design/King_System|King System Overview]] |
 
 ---
 

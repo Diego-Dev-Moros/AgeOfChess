@@ -6,6 +6,13 @@
 
 Define the visual asset rules for the Holy Ground Terrain card.
 
+Game design connections:
+
+- [[Systems/Terrain/Holy_Ground|Holy Ground Rules]]
+- [[Systems/Terrain/Terrain|Terrain System]]
+- [[Systems/Combat/Damage_Calculation|Damage Calculation]]
+- [[Balancing/Card_Balance|Card Balance]]
+
 ---
 
 # 2. Gameplay Role

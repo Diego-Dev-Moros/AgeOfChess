@@ -528,7 +528,18 @@ Potential tuning areas:
 
 ---
 
-# 14. FINAL STATEMENT
+# 14. RELATED DOCUMENTATION
+
+- [[Balancing_Index]]
+- [[Balancing/Combat_Probabilities|Combat Probabilities]]
+- [[Balancing/Card_Balance|Card Balance]]
+- [[Game_Design/System|System]]
+- [[Game_Design/Rules|Rules]]
+- [[Design_Node_Map]]
+
+---
+
+# 15. FINAL STATEMENT
 
 The system is designed to:
 

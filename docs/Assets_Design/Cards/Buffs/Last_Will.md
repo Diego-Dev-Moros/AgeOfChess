@@ -6,6 +6,13 @@
 
 Define the visual asset rules for the Last Will Buff card.
 
+Game design connections:
+
+- [[Systems/Cards/Buffs/Last_Will|Last Will Rules]]
+- [[Systems/Cards/Buffs|Buffs]]
+- [[Edge_Cases]]
+- [[Balancing/Card_Balance|Card Balance]]
+
 ---
 
 # 2. Gameplay Role

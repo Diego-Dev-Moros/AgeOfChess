@@ -6,6 +6,14 @@
 
 Define the visual asset rules for the Age of Chess user interface.
 
+Game design connections:
+
+- [[Systems/Timing/Timing_And_Priority|Timing And Priority]]
+- [[Systems/Combat/Combat_Flow|Combat Flow]]
+- [[Systems/Cards/Cards_System|Cards System Reference]]
+- [[Systems/King/King|King System]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy Phase]]
+
 ---
 
 # 2. Gameplay Role

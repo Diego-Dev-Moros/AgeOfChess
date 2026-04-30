@@ -8,6 +8,19 @@ The UI presents game state, card information, HP, dice results, turn state, and 
 
 It must be fast to read and visually compatible with the pixel art world.
 
+Design node connections:
+
+- [[Design_Node_Map]]
+- [[Assets_Design/UI/UI_Index|UI Asset Design Index]]
+- [[Assets_Design/UI/UI|UI Asset]]
+- [[Systems/Timing/Timing_And_Priority|Timing And Priority]]
+- [[Systems/Combat/Combat_Flow|Combat Flow]]
+- [[Systems/Cards/Cards_System|Cards System Reference]]
+- [[Systems/King/King|King System]]
+- [[Systems/Frenzy/Frenzy_Phase|Frenzy Phase]]
+- [[Art_Direction/Style_Guide|Style Guide]]
+- [[Art_Direction/Color_Palette|Color Palette]]
+
 ---
 
 # 2. Gameplay Role

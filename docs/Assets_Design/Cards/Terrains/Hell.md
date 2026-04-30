@@ -6,6 +6,13 @@
 
 Define the visual asset rules for the Hell Terrain card.
 
+Game design connections:
+
+- [[Systems/Terrain/Hell|Hell Rules]]
+- [[Systems/Terrain/Terrain|Terrain System]]
+- [[Systems/Combat/Damage_Calculation|Damage Calculation]]
+- [[Balancing/Card_Balance|Card Balance]]
+
 ---
 
 # 2. Gameplay Role

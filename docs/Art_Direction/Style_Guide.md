@@ -82,4 +82,16 @@ Every new visual asset must pass three checks:
 
 ---
 
+# 8. Related Documentation
+
+- [[Art_Direction/Art_Direction_Index|Art Direction Index]]
+- [[Art_Direction/Color_Palette|Color Palette]]
+- [[Art_Direction/Lighting_and_Shading|Lighting and Shading]]
+- [[Art_Direction/Pixel_Standards|Pixel Standards]]
+- [[Art_Direction/Visual_Identity|Visual Identity]]
+- [[Assets_Design/Assets_Design_Index|Assets Design Index]]
+- [[Design_Node_Map]]
+
+---
+
 END
