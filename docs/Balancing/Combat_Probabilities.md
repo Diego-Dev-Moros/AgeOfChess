@@ -168,7 +168,8 @@ However, it should not be treated as offensive damage for all card interactions.
 
 For example:
 
-- Stone Pieces does not upgrade Minimum Damage Rule damage.
+- Stone Pieces may upgrade Minimum Damage Rule damage for the player who owns Stone Pieces, because that Buff raises that player's combat damage floor.
+- This interaction should be tested because it may make Stone Pieces too consistent.
 
 ---
 

@@ -10,6 +10,8 @@ Age of Chess uses a fixed match timer to ensure that games do not last indefinit
 
 The Time System is also responsible for triggering the Frenzy Phase.
 
+Timing reference: [[Timing_And_Priority]]
+
 ---
 
 # 2. Purpose

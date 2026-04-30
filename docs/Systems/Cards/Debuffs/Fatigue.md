@@ -27,6 +27,14 @@ If triggered:
 - The attack is redirected to a random valid allied piece.
 - If no valid allied piece exists, the attack fails.
 
+This targeting rule is not final.
+
+Recommended first test:
+
+```txt
+Valid allied piece = allied non-King piece within the attacker's legal attack range from its original square.
+```
+
 ---
 
 # 4. Trigger
@@ -40,6 +48,17 @@ Before an affected enemy piece resolves an attack.
 All enemy non-King pieces.
 
 The redirected target must be an allied piece of the attacker.
+
+Current recommended test target:
+
+- Allied non-King piece
+- Within the attacker's legal attack range from the attacker's original square
+- Not the attacking piece
+- Not the King
+
+Alternative still open:
+
+- Allied piece adjacent to the attacker or adjacent to the intended target
 
 ---
 
@@ -57,6 +76,7 @@ Entire match.
 - Cannot target the King unless a special rule allows it.
 - If no valid allied target exists, the attack simply fails.
 - Does not stack with other redirect effects unless explicitly stated.
+- If the attack fails because no valid target exists, the attacker remains in its original square and the turn is consumed.
 
 ---
 
@@ -104,10 +124,11 @@ Before resolving combat:
 Fatigue check triggers.
 
 If Fatigue activates:
-White Bishop's attack is redirected to a random valid White allied piece.
+White Bishop's attack is redirected to a random valid White allied non-King piece within the Bishop's legal attack range from its original square.
 
 If no allied piece is valid:
 The attack fails.
+The Bishop remains in its original square.
 ```
 
 ---

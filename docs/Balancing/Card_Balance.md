@@ -155,7 +155,7 @@ If a piece deals damage, its total damage cannot be lower than 2.
 
 ## Controls
 
-- Does not upgrade Minimum Damage Rule damage
+- May upgrade Minimum Damage Rule damage for its owner if combat damage occurs
 - Requires damage to occur first
 - Does not affect Divine Attack
 - Does not apply during Frenzy
@@ -381,7 +381,7 @@ Enemy attacks have a 5% chance to redirect to a valid allied piece.
 - Only 5% base chance
 - Max probability cap 20%
 - Cannot target the King
-- Only redirects to valid allied pieces in legal attack range
+- Recommended first test: only redirects to valid allied pieces in legal attack range
 - If no valid target exists, attack fails
 - Does not apply during Frenzy
 

@@ -148,7 +148,9 @@ Each piece has:
 
 ## 7.1 When Combat Happens
 
-When a piece moves into a square occupied by an enemy piece.
+When a non-King piece moves into a square occupied by an enemy non-King piece.
+
+The King does not use normal combat.
 
 ---
 
@@ -196,6 +198,7 @@ If total damage = 0:
 - Attacker dies → defender remains
 - Both survive → attacker returns to original square
 - Both die → square becomes empty
+- Failed attack before combat → attacker remains in original square and the turn is consumed
 
 ---
 
@@ -243,6 +246,8 @@ After attacking:
 
 → King cannot move on next turn
 
+If the King is in check, check response overrides this restriction.
+
 ---
 
 ## 9.4 Divinity States
@@ -252,13 +257,15 @@ After attacking:
 | 3–1     | Instant kill                       |
 | 0        | Cannot attack                      |
 | -1 to -3 | +5% cowardice to all allied pieces |
-| ≤ -3    | All allied pieces HP = 1           |
+| < -3     | All allied pieces HP = 1           |
+
+Demon King threshold is still a balance question.
 
 ---
 
 ## 9.5 Divinity Recovery
 
-If King does not attack for 3 turns:
+If King does not attack for 3 of that player's own turns:
 
 → gains +1 Divinity (max 3)
 
@@ -279,7 +286,7 @@ If King attacks twice within 2 turns:
 ## 10.1 Rules
 
 - Each player receives 1 random buff at start
-- Buffs are permanent
+- Buff visibility and activation timing are still being defined
 - Buffs do not stack
 
 ---
@@ -287,7 +294,7 @@ If King attacks twice within 2 turns:
 ## 10.2 Buff Effects
 
 - Giant Slayer → +2 damage vs stronger pieces
-- Stone Pieces → minimum damage is always 2
+- Stone Pieces → allied combat damage floor becomes 2 when combat damage occurs
 - Iron Age → Defense Dice = Attack Dice
 - Last Will → deal 2 damage upon death
 
@@ -309,7 +316,7 @@ If King attacks twice within 2 turns:
 - Crystal Pieces → -1 HP (except pawns)
 - Cowardice → 15% chance attack fails
 - Immoral → Attack Dice = Defense Dice
-- Fatigue → 5% chance to hit allied piece
+- Fatigue → 5% chance to redirect to a valid allied piece; targeting rule is still under design
 
 ---
 
@@ -366,9 +373,8 @@ Each turn:
 1. Select piece
 2. Move piece
 3. Resolve combat (if applicable)
-4. Apply buffs/debuffs
-5. Apply terrain effects
-6. Check check / checkmate
+4. Apply buffs/debuffs and terrain according to timing rules
+5. Check check / checkmate
 
 ---
 
@@ -389,6 +395,8 @@ A King is in check if:
 - Move King
 - Block attack
 - Capture attacking piece
+
+Divine Attack as a check response is currently a proposed system rule, not yet official.
 
 ---
 

@@ -35,6 +35,8 @@ At the start of the match:
 - The Terrain affects both players equally.
 - The Terrain remains active for the entire match unless stated otherwise.
 - Only 1 Terrain can be active at a time.
+- Terrain is public and known before the match begins.
+- Terrain is not hidden like cards.
 
 ---
 

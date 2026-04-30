@@ -98,7 +98,22 @@ White Knight takes 2 damage after combat resolution.
 
 ---
 
-# 12. Balance Notes
+# 12. Board Occupation Edge Case
+
+If Last Will kills the attacker after the defender dies:
+
+1. The defender is removed.
+2. Last Will deals 2 damage to the attacker.
+3. If the attacker dies, it is removed.
+4. The target square becomes empty.
+
+The attacker does not remain occupying the square if Last Will kills it.
+
+See [[Edge_Cases]].
+
+---
+
+# 13. Balance Notes
 
 Risk:
 

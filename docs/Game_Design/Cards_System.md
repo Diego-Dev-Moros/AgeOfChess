@@ -1,5 +1,9 @@
 # CARDS SYSTEM
 
+System reference: [[Systems/Cards/Cards_System|Cards System Reference]]
+
+Related documents: [[Buffs]], [[Debuffs]], [[Card_Balance]]
+
 ---
 
 # 1. OVERVIEW
@@ -25,6 +29,8 @@ Each player receives:
 - Permanent
 - Non-stackable
 - Bounded effects
+- Visibility and activation timing are still being finalized
+- Cards may be hidden until activated or revealed
 
 ---
 

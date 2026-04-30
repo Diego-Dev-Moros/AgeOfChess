@@ -26,7 +26,9 @@ If the attack fails:
 
 - No dice are rolled.
 - No combat damage occurs.
+- The attacker remains in its original square.
 - The action counts as an attempted attack.
+- The player's turn is consumed.
 
 ---
 
@@ -53,7 +55,7 @@ Entire match.
 - Does not affect the King by default.
 - Does not apply during Frenzy.
 - Failure chance cannot exceed 20%.
-- Does not prevent movement unless the failed attack involved entering an occupied square.
+- If the failed attack involved entering an occupied square, the movement does not complete.
 - Does not stack with other failure chances beyond the probability cap.
 
 ---

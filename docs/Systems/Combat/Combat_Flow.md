@@ -54,19 +54,23 @@ The defender uses:
 Combat is resolved in the following order:
 
 1. Identify attacker and defender
-2. Apply active modifiers before rolling
-3. Attacker rolls Attack Dice
-4. Defender rolls Defense Dice
-5. Sort dice from highest to lowest
-6. Select only the top 3 dice
-7. Pair dice highest vs highest
-8. Resolve each comparison
-9. Apply tie rules
-10. Apply momentum rule
-11. Apply minimum damage rule if needed
-12. Apply final damage
-13. Check deaths
-14. Resolve board position
+2. Resolve pre-action failure checks
+3. Apply pre-combat modifiers
+4. Attacker rolls Attack Dice
+5. Defender rolls Defense Dice
+6. Sort dice from highest to lowest
+7. Select only the top 3 dice
+8. Pair dice highest vs highest
+9. Resolve each comparison
+10. Apply tie rules
+11. Apply momentum rule
+12. Apply minimum damage rule if needed
+13. Apply damage modifiers
+14. Apply final damage simultaneously
+15. Check deaths and death effects
+16. Resolve board position
+
+The canonical timing reference is [[Timing_And_Priority]].
 
 ---
 
@@ -87,6 +91,10 @@ Examples:
 - Debuffs
 - Terrain
 - King-related penalties
+
+If a failure effect stops the attack before combat, the attacker remains in its original square and the turn is consumed.
+
+See [[Edge_Cases]].
 
 ---
 
@@ -264,6 +272,24 @@ After damage is applied:
 - Both pieces are removed
 - The target square becomes empty
 
+## Attack Fails Before Combat
+
+- No dice are rolled
+- No combat damage occurs
+- The attacker remains in its original square
+- The player's turn is consumed
+
+## Defender Dies, Then Attacker Dies From Death Effect
+
+- The defender is removed
+- The death effect resolves
+- If the attacker dies, it is removed
+- The target square becomes empty
+
+Example:
+
+- Last Will kills the attacker after the defender dies.
+
 ---
 
 # 16. Anti-Stall Rule
@@ -301,6 +327,7 @@ During Frenzy Phase:
 - Combat system is disabled
 - Dice are not rolled
 - Captures are instant, as in classical chess
+- Combat-related buffs, debuffs, and terrain effects are disabled by default
 
 ---
 

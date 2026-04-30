@@ -28,8 +28,10 @@ Whenever an allied piece deals damage in normal combat, its total damage cannot 
 
 Triggers after normal damage calculation if:
 
-- The allied piece dealt at least 1 damage.
+- The allied piece dealt at least 1 combat damage.
 - The final damage total is lower than 2.
+
+This can include damage created by the Minimum Damage Rule.
 
 ---
 
@@ -47,7 +49,7 @@ Entire match.
 
 # 7. Restrictions
 
-- Does not trigger if the attack deals 0 damage before Minimum Damage Rule.
+- Does not trigger if the attack fails before combat.
 - Does not affect Divine Attack.
 - Does not affect the King.
 - Does not apply during Frenzy.
@@ -100,7 +102,29 @@ Black Knight takes 2 damage.
 
 ---
 
-# 12. Balance Notes
+# 12. Minimum Damage Example
+
+```txt
+White has Stone Pieces.
+
+White Pawn attacks Black Pawn.
+
+The dice and tie rules produce 0 damage.
+
+Minimum Damage Rule:
+Both pieces would deal 1 damage.
+
+Stone Pieces:
+White Pawn's combat damage floor becomes 2.
+
+Result:
+Black Pawn takes 2 damage.
+White Pawn takes 1 damage.
+```
+
+---
+
+# 13. Balance Notes
 
 Risk:
 

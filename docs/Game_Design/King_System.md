@@ -27,6 +27,10 @@ After attacking:
 
 → King cannot move next turn
 
+Check response has priority over Commitment.
+
+If the King is in check, it may move to escape check as long as the move is legal.
+
 ---
 
 # 4. DIVINITY STATES
@@ -36,13 +40,15 @@ After attacking:
 | 3–1 | Instant kill |
 | 0 | Cannot attack |
 | -1 to -3 | Cowardice |
-| ≤ -3 | Allied HP = 1 |
+| < -3 | Allied HP = 1 |
+
+Demon King threshold remains an open balance question.
 
 ---
 
 # 5. RECOVERY
 
-If no attack for 3 turns:
+If no attack for 3 of that player's own turns:
 
 → +1 Divinity
 

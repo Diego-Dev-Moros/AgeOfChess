@@ -79,7 +79,9 @@ The game operates through 5 interacting systems:
 
 # 6. SYSTEM PRIORITY ORDER
 
-When multiple effects apply:
+When multiple effects apply, use [[Timing_And_Priority]] as the canonical reference.
+
+High-level order:
 
 1. Movement
 2. Combat

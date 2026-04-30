@@ -1,5 +1,9 @@
 # COMBAT SYSTEM
 
+System reference: [[Combat_Flow]]
+
+Timing reference: [[Timing_And_Priority]]
+
 ---
 
 # 1. PURPOSE
@@ -12,7 +16,7 @@ Defines how pieces interact when occupying the same square.
 
 Occurs when:
 
-→ A piece moves into an enemy-occupied square
+→ A non-King piece moves into a square occupied by an enemy non-King piece
 
 ---
 

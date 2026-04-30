@@ -27,6 +27,13 @@ The failure chance is checked before a piece resolves a normal attack.
 
 The damage bonus applies only if the attack succeeds and deals damage.
 
+If the attack fails:
+
+- No dice are rolled.
+- No combat occurs.
+- The attacker remains in its original square.
+- The player's turn is consumed.
+
 ---
 
 # 4. Affected Pieces
@@ -52,6 +59,7 @@ The effect stops applying during Frenzy Phase.
 - Does not apply to Divine Attack.
 - Does not stack with itself.
 - Does not make failed attacks deal damage.
+- Failed attacks do not move into the occupied enemy square.
 
 ---
 
@@ -121,7 +129,9 @@ Attack fails.
 Result:
 No dice are rolled.
 No combat damage is dealt.
+Black Knight remains in its original square.
 The attack counts as attempted.
+Black's turn is consumed.
 ```
 
 ---

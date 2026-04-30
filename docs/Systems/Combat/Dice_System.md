@@ -82,6 +82,10 @@ When combat begins:
 4. Only top 3 dice are considered
 5. Dice are paired in order
 
+Dice are only rolled if the attack passes all pre-action failure checks.
+
+See [[Timing_And_Priority]].
+
 ---
 
 # 7. Top 3 Dice Rule
@@ -273,6 +277,8 @@ If a piece is affected by Cowardice:
 - Before rolling, check if the attack fails
 - If the attack fails, no dice are rolled
 - The attack produces no combat damage
+- The attacker remains in its original square
+- The player's turn is consumed
 
 The move is still considered an attempted attack.
 

@@ -31,10 +31,19 @@ Buffs exist to:
 At the start of a match:
 
 - Each player receives 1 Buff card.
-- Buffs are active for the entire match.
 - Buffs affect all allied pieces unless the card says otherwise.
 - Buffs do not stack.
 - A player cannot have duplicate Buff effects.
+
+Card visibility and activation timing are not fully finalized.
+
+Working direction:
+
+- Buffs may start hidden.
+- A Buff is revealed when its effect changes a game outcome or must be checked publicly.
+- Whether Buffs are passive from the start, manually activated, or secretly active is an open design decision.
+
+See [[Systems/Cards/Cards_System|Cards System Reference]] and [[Edge_Cases]].
 
 ---
 
@@ -69,7 +78,7 @@ Buffs must respect these limits:
 
 # 6. When Buffs Apply
 
-Buffs are checked during the modifier step of combat.
+Buffs are checked according to [[Timing_And_Priority]].
 
 General timing:
 
@@ -80,6 +89,8 @@ General timing:
 5. Damage is calculated.
 6. Buff effects are applied.
 7. Death and board position are resolved.
+
+Some Buffs modify pre-combat dice, while others modify damage or death effects.
 
 ---
 
@@ -145,6 +156,12 @@ Current Buff cards:
 - [[Stone_Pieces]]
 - [[Iron_Age]]
 - [[Last_Will]]
+
+Important current clarification:
+
+- Stone Pieces raises its owner's combat damage floor to 2 when that piece deals combat damage.
+- This can include damage created by the Minimum Damage Rule.
+- See [[Stone_Pieces]] and [[Edge_Cases]].
 
 ---
 

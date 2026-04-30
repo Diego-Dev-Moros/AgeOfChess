@@ -165,6 +165,12 @@ The King may still be in check after attacking if enemy pieces threaten its new 
 
 If the King is in check on its next turn, the player must resolve the check according to legal check rules.
 
+Check response has priority over Commitment.
+
+If a committed King is in check, the King may move to escape check as long as the move is legal.
+
+See [[Timing_And_Priority]] and [[Edge_Cases]].
+
 ---
 
 # 11. Purpose of the Commitment Rule
@@ -220,7 +226,7 @@ Divinity becomes 2.
 
 # 14. Divinity Recovery
 
-If the King does not perform a Divine Attack for 3 consecutive turns:
+If the King does not perform a Divine Attack for 3 of that player's own consecutive turns:
 
 ```txt
 Divinity +1
@@ -233,6 +239,10 @@ Maximum Divinity:
 ```
 
 The King cannot recover above 3 Divinity.
+
+Recovery is checked at the end of that player's third own turn without Divine Attack.
+
+Opponent turns do not count toward this recovery timer.
 
 ---
 
@@ -277,7 +287,13 @@ The King changes state depending on its current Divinity.
 | 3 to 1      | Divine King    | Can use Divine Attack         |
 | 0           | Thorn King     | Cannot attack                 |
 | -1 to -3    | Corrupted King | Allied pieces gain Cowardice  |
-| -3 or lower | Demon King     | All allied pieces HP become 1 |
+| Less than -3 | Demon King    | All allied pieces HP become 1 |
+
+Balance note:
+
+- Demon King is currently preferred to begin below -3, not exactly at -3.
+- This threshold is not final and must be validated through simulations and playtesting.
+- See [[Edge_Cases]].
 
 ---
 
@@ -410,7 +426,7 @@ This creates a long-term cost for reckless King usage.
 ## Divinity Range
 
 ```txt
--3 or lower
+Less than -3
 ```
 
 ## Effect
@@ -434,6 +450,12 @@ When the King reaches Demon King state:
 - This does not affect the King
 - This does not kill pieces directly
 - This effect ends during Frenzy because all pieces are already 1 HP
+
+Current status:
+
+- The preferred threshold is less than -3.
+- This is an open balance question.
+- If testing shows Demon King is unreachable, the threshold may move back to -3.
 
 ---
 
@@ -487,7 +509,7 @@ State = Corrupted King
 ## Severe Corruption
 
 ```txt
-Divinity ≤ -3
+Divinity < -3
 State = Demon King
 ```
 
@@ -505,7 +527,7 @@ To go below 0, one of the following must occur:
 - Special scenario rules
 - Campaign/story modifiers
 
-This keeps Demon King rare and dramatic.
+This keeps Demon King rare and dramatic, but the exact threshold remains a balance question.
 
 ---
 
@@ -530,7 +552,7 @@ When in check, the player must respond by one of the following:
 - Move the King to a safe square
 - Capture the checking piece
 - Block the line of attack
-- Use a legal Divine Attack if it removes the checking threat and the King has Divinity
+- Use a legal Divine Attack if the proposed Divine Attack check-response rule is approved
 
 ---
 
@@ -549,12 +571,22 @@ The King does not need to have 0 HP because the King has no HP.
 
 # 31. Divine Attack as Check Response
 
+Status:
+
+```txt
+Proposed rule, not official.
+```
+
+Proposed rule:
+
 The King may use Divine Attack to escape check if:
 
 - The King has Divinity greater than 0
-- The target is the checking piece
-- The destination square is legal
-- The King does not end in check after the attack
+- The Divine Attack removes the checking piece
+- The King can legally move to the target square
+- The King does not end the move in check
+- The target is not the opposing King
+- Frenzy Phase is not active
 
 Example:
 
@@ -565,9 +597,11 @@ The King has 1 Divinity.
 
 If the King can legally move to the Rook’s square and that square is safe after the capture:
 
-The King may Divine Attack the Rook.
+The King may use the proposed Divine Attack response against the Rook.
 Divinity becomes 0.
 ```
+
+This rule should remain in system documentation until confirmed for the official rules.
 
 ---
 
@@ -740,7 +774,7 @@ When Black pieces attack, they have a 10% chance to fail before rolling dice.
 # 43. Example 5 — Demon King
 
 ```txt
-White King reaches Divinity -3.
+White King reaches Divinity -4.
 
 White King becomes Demon King.
 

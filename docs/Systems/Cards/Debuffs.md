@@ -31,9 +31,18 @@ At the start of a match:
 
 - Each player receives 1 Debuff card.
 - That Debuff is applied to the opponent.
-- Debuffs are active for the entire match unless stated otherwise.
 - Debuffs affect all enemy pieces unless the card says otherwise.
 - Debuffs do not stack.
+
+Card visibility and activation timing are not fully finalized.
+
+Working direction:
+
+- Debuffs may start hidden.
+- A Debuff is revealed when its effect changes a game outcome or must be checked publicly.
+- Whether Debuffs are passive from the start, manually activated, or secretly active is an open design decision.
+
+See [[Systems/Cards/Cards_System|Cards System Reference]] and [[Edge_Cases]].
 
 ---
 
@@ -67,7 +76,7 @@ A Debuff must NOT:
 
 # 6. When Debuffs Apply
 
-Debuffs are checked during the modifier step.
+Debuffs are checked according to [[Timing_And_Priority]].
 
 General timing:
 
@@ -76,6 +85,8 @@ General timing:
 3. If the Debuff activates, it modifies the action.
 4. Combat proceeds, fails, or redirects depending on the effect.
 5. Damage and board position are resolved.
+
+If a Debuff causes an attack to fail before combat, the attacker remains in its original square and the turn is consumed.
 
 ---
 
@@ -139,6 +150,12 @@ Current Debuff cards:
 - [[Cowardice]]
 - [[Immoral]]
 - [[Fatigue]]
+
+Open design note:
+
+- Fatigue targeting is not finalized.
+- Recommended first test: redirect only to allied non-King pieces within the attacker's legal attack range from its original square.
+- See [[Edge_Cases]].
 
 ---
 

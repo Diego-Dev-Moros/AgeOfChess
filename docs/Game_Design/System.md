@@ -276,13 +276,15 @@ Initial value: 3
 | 3–1     | Divine     | Instant kill             |
 | 0        | Thorn King | Cannot attack            |
 | -1 to -3 | Corrupted  | +5% cowardice per level  |
-| ≤ -3    | Demon King | All allied pieces HP = 1 |
+| < -3     | Demon King | All allied pieces HP = 1 |
+
+The Demon King threshold is an open balance question. Current preference is below -3, but this must be validated through simulations and playtesting.
 
 ---
 
 ## 6.5 Divinity Recovery
 
-If King does not attack for 3 turns:
+If King does not attack for 3 of that player's own turns:
 
 → +1 Divinity (max 3)
 
@@ -393,7 +395,9 @@ Purpose:
 
 ### Fatigue
 
-- 5% chance to hit allied unit
+- 5% chance to redirect to a valid allied piece
+
+Fatigue targeting remains an open design decision. Recommended first test: allied non-King pieces within the attacker's legal attack range.
 
 ---
 
@@ -458,12 +462,13 @@ Purpose:
 
 ## 10.1 Turn Structure
 
+Use [[Timing_And_Priority]] as the canonical timing reference.
+
 1. Select piece
 2. Move
 3. Resolve combat
-4. Apply buffs/debuffs
-5. Apply terrain
-6. Check check/checkmate
+4. Apply buffs/debuffs and terrain according to their timing step
+5. Check check/checkmate
 
 ---
 

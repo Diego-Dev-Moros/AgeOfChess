@@ -138,13 +138,16 @@ When calculating damage, use this order:
 2. Apply tie damage
 3. Apply momentum damage
 4. Apply minimum damage if total damage is 0
-5. Apply buff modifiers
-6. Apply debuff modifiers
-7. Apply terrain modifiers
-8. Apply anti-stall damage
-9. Apply damage to HP
-10. Check deaths
-11. Trigger death effects
+5. Apply damage-floor effects such as Stone Pieces
+6. Apply buff damage bonuses
+7. Apply debuff damage modifiers
+8. Apply terrain damage modifiers
+9. Apply anti-stall damage
+10. Apply damage to HP simultaneously
+11. Check deaths
+12. Trigger death effects
+
+The canonical timing reference is [[Timing_And_Priority]].
 
 ---
 
@@ -164,11 +167,15 @@ If a lower-value piece attacks a higher-value piece:
 
 ## Stone Pieces
 
-Minimum damage becomes:
+If an allied piece deals damage as part of combat resolution, its minimum total damage becomes:
 
 ```txt
 2
 ```
+
+This can include damage created by the Minimum Damage Rule.
+
+Stone Pieces does not apply if the attack fails before combat.
 
 ## Last Will
 
@@ -288,6 +295,10 @@ If Last Will triggers:
 4. Enemy receives 2 damage
 5. Enemy death is checked
 
+If Last Will kills the attacker after the defender dies, the attacker is removed and the target square becomes empty.
+
+See [[Edge_Cases]].
+
 This can cause delayed mutual death.
 
 ---
@@ -299,6 +310,7 @@ During Frenzy:
 - Damage calculation is disabled
 - HP is set to 1
 - Captures are instant
+- HP being set to 1 is not damage and does not trigger death effects
 
 ---
 
