@@ -178,6 +178,14 @@
   },
   "active": "4e8b8719d1b051f6",
   "lastOpenFiles": [
+    "Systems/Combat/Combat_Flow.md",
+    "Tech/Naming_Conventions.md",
+    "Tech/Asset_Pipeline.md",
+    "Tech/Godot/Nodes_Architecture.md",
+    "Tech/Godot/Scripts.md",
+    "Tech/Godot/Scenes.md",
+    "Tech/Godot",
+    "Tech",
     "Assets_Design/Assets_Design_Index.md",
     "Design_Node_Map.md",
     "Assets_Design/Dice/Dice_Index.md",
@@ -198,12 +206,6 @@
     "Assets_Design/Pieces/Pawn.md",
     "Assets_Design/Pieces/Pieces_Index.md",
     "Assets_Design/Cards/Terrains/Dirty_Play.md",
-    "Assets_Design/Cards/Terrains/Will.md",
-    "Assets_Design/Cards/Terrains/Hell.md",
-    "Assets_Design/Cards/Terrains/Holy_Ground.md",
-    "Assets_Design/Cards/Terrains/Equal_Conditions.md",
-    "Assets_Design/Cards/Debuffs/Immoral.md",
-    "Assets_Design/Cards/Debuffs/Fatigue.md",
     "Assets_Design/Dice",
     "Assets_Design/UI",
     "Assets_Design/Board",
@@ -211,8 +213,6 @@
     "Assets_Design/Cards/Terrains",
     "Assets_Design/Cards/Debuffs",
     "Assets_Design/Cards/Buffs",
-    "Assets_Design/Cards",
-    "04_Assets_Design",
-    "03_Art_Direction"
+    "Assets_Design/Cards"
   ]
 }
