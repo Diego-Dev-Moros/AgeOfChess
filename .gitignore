@@ -32,6 +32,7 @@ ENV/
 .export-*/*.zip
 *.import
 *.godot-export
+game/.godot/
 
 # Godot build
 *.exe
@@ -61,7 +62,8 @@ ENV/
 assets/cache/
 
 # Ignore cache logs
-game\Logs
+game/Logs/*
+!game/Logs/.gitkeep
 
 # Ignore obsidian files
 .obsidian
