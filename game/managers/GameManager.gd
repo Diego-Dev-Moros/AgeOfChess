@@ -25,7 +25,11 @@ var terrain_draw: Array[String] = ["will", "equal_conditions", "dirty_play"]
 var effect_card_draw: Array[String] = ["stone_pieces", "cowardice", "iron_age"]
 var selected_effect_card := "stone_pieces"
 var applied_effect_card := "stone_pieces"
+var cpu_effect_card_draw: Array[String] = ["cowardice", "crystal_pieces", "immoral"]
+var cpu_selected_effect_card := "cowardice"
+var cpu_applied_effect_card := "cowardice"
 var ability_card_used := false
+var setup_animation_running := false
 var implemented_buff_pool: Array[String] = ["stone_pieces", "giant_slayer", "iron_age"]
 var implemented_debuff_pool: Array[String] = ["cowardice", "crystal_pieces", "immoral"]
 var implemented_terrain_pool: Array[String] = ["will", "equal_conditions", "dirty_play"]
@@ -65,6 +69,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if game_over:
 		return
+	if setup_animation_running:
+		_update_ui("")
+		return
 	timer_remaining = maxf(0.0, timer_remaining - delta)
 	if not frenzy and timer_remaining <= FRENZY_START_SECONDS:
 		_start_frenzy("Frenzy begins: timer reached 01:00.")
@@ -90,8 +97,7 @@ func start_match() -> void:
 	board.set_active_terrain(active_terrain)
 	if active_terrain == "will":
 		board.apply_will_terrain()
-	if debuff_by_player[CPU_PLAYER] == "crystal_pieces":
-		board.apply_crystal_pieces(CPU_PLAYER)
+	_apply_crystal_piece_debuffs()
 	board.clear_selection()
 	match_ui.clear_full_log()
 	turn_manager.start_match()
@@ -106,7 +112,17 @@ func start_match() -> void:
 	_begin_current_turn()
 
 func _on_setup_shuffled() -> void:
+	if setup_animation_running:
+		return
+	setup_animation_running = true
 	_shuffle_setup()
+	_update_ui("Select one White card to continue. CPU has chosen %s." % _short_card_name(cpu_selected_effect_card))
+	await match_ui.play_card_draw_sequence()
+	while selected_effect_card == "" and setup_animation_running:
+		await get_tree().create_timer(0.1).timeout
+	_update_ui("White selected %s. Terrain draw begins." % _short_card_name(selected_effect_card))
+	await match_ui.play_terrain_draw_sequence(terrain_draw, active_terrain)
+	setup_animation_running = false
 	start_match()
 
 func _shuffle_setup() -> void:
@@ -116,8 +132,11 @@ func _shuffle_setup() -> void:
 	selectable_cards.append_array(implemented_buff_pool)
 	selectable_cards.append_array(implemented_debuff_pool)
 	effect_card_draw = _draw_unique(selectable_cards, 3)
-	selected_effect_card = effect_card_draw[0] if not effect_card_draw.is_empty() else ""
+	cpu_effect_card_draw = _draw_unique(selectable_cards, 3)
+	selected_effect_card = ""
+	cpu_selected_effect_card = cpu_effect_card_draw[rng.randi_range(0, cpu_effect_card_draw.size() - 1)] if not cpu_effect_card_draw.is_empty() else ""
 	applied_effect_card = ""
+	cpu_applied_effect_card = cpu_selected_effect_card
 	ability_card_used = false
 
 func _on_effect_card_selected(card_id: String) -> void:
@@ -135,22 +154,31 @@ func _on_ability_card_used() -> void:
 	applied_effect_card = selected_effect_card
 	ability_card_used = true
 	_apply_selected_effect_card()
-	if debuff_by_player[CPU_PLAYER] == "crystal_pieces":
-		board.apply_crystal_pieces(CPU_PLAYER)
+	_apply_crystal_piece_debuffs()
 	match_ui.add_log("Ability card used: %s." % _card_display_name(selected_effect_card))
 	_update_ui("Ability card used: %s." % _short_card_name(selected_effect_card))
 
 func _apply_selected_effect_card() -> void:
 	buff_by_player[HUMAN_PLAYER] = ""
 	debuff_by_player[CPU_PLAYER] = ""
-	var active_card := applied_effect_card
-	if implemented_buff_pool.has(active_card):
-		buff_by_player[HUMAN_PLAYER] = active_card
-	elif implemented_debuff_pool.has(active_card):
-		debuff_by_player[CPU_PLAYER] = active_card
+	buff_by_player[CPU_PLAYER] = ""
+	debuff_by_player[HUMAN_PLAYER] = ""
+	_apply_effect_card_for_player(applied_effect_card, HUMAN_PLAYER)
+	_apply_effect_card_for_player(cpu_applied_effect_card, CPU_PLAYER)
+
+func _apply_effect_card_for_player(card_id: String, owner_id: int) -> void:
+	if implemented_buff_pool.has(card_id):
+		buff_by_player[owner_id] = card_id
+	elif implemented_debuff_pool.has(card_id):
+		debuff_by_player[1 - owner_id] = card_id
+
+func _apply_crystal_piece_debuffs() -> void:
+	for player_id in [HUMAN_PLAYER, CPU_PLAYER]:
+		if debuff_by_player[player_id] == "crystal_pieces":
+			board.apply_crystal_pieces(player_id)
 
 func _on_board_square_clicked(coord: Vector2i) -> void:
-	if game_over or turn_manager.current_player_id != HUMAN_PLAYER:
+	if game_over or setup_animation_running or turn_manager.current_player_id != HUMAN_PLAYER:
 		return
 	var clicked_piece := board.get_piece_at(coord)
 	if selected_piece_id == "":
@@ -236,8 +264,7 @@ func _resolve_normal_combat(attacker: Piece, defender: Piece, from_coord: Vector
 	var result := combat_resolver.resolve_combat(attacker, defender, context)
 	result["from_coord"] = from_coord
 	board.execute_combat_board_result(attacker, defender, target, result)
-	if result.failed:
-		board.show_feedback("MISSED", from_coord, Color(1.0, 0.35, 0.20))
+	board.show_combat_feedback(from_coord, target, result)
 	match_ui.show_combat_result(result, attacker, defender)
 
 func _resolve_divine_attack(king: Piece, target_piece: Piece, target: Vector2i) -> bool:
@@ -249,6 +276,7 @@ func _resolve_divine_attack(king: Piece, target_piece: Piece, target: Vector2i) 
 		return false
 	board.remove_piece(target_piece)
 	board.move_piece_to(king, target)
+	board.show_feedback("DIVINE KO", target, Color(1.0, 0.9, 0.35))
 	divinity[king.owner_id] -= 1
 	if turn_manager.turn_number - last_divine_attack_turn[king.owner_id] <= 4:
 		divinity[king.owner_id] -= 1
@@ -316,7 +344,7 @@ func _schedule_cpu_turn() -> void:
 	var scheduled_match_serial: int = match_serial
 	await get_tree().create_timer(0.45).timeout
 	cpu_action_pending = false
-	if scheduled_match_serial != match_serial or game_over or turn_manager.current_player_id != CPU_PLAYER:
+	if scheduled_match_serial != match_serial or game_over or setup_animation_running or turn_manager.current_player_id != CPU_PLAYER:
 		return
 	_play_cpu_turn()
 
@@ -422,11 +450,16 @@ func _update_ui(message: String) -> void:
 		"terrain_display_name": _terrain_display_name(active_terrain),
 		"terrain_description": _terrain_description(active_terrain),
 		"white_buff_display_name": _card_display_name(buff_by_player[HUMAN_PLAYER]),
+		"white_debuff_display_name": _card_display_name(debuff_by_player[HUMAN_PLAYER]),
+		"black_buff_display_name": _card_display_name(buff_by_player[CPU_PLAYER]),
 		"black_debuff_display_name": _card_display_name(debuff_by_player[CPU_PLAYER]),
 		"effect_card_draw": effect_card_draw,
 		"effect_card_draw_names": _display_names_for(effect_card_draw, false),
 		"selected_effect_card": selected_effect_card,
 		"applied_effect_card": applied_effect_card,
+		"cpu_effect_card_draw": cpu_effect_card_draw,
+		"cpu_selected_effect_card": cpu_selected_effect_card,
+		"cpu_applied_effect_card": cpu_applied_effect_card,
 		"ability_card_used": ability_card_used,
 		"terrain_draw": terrain_draw,
 		"terrain_draw_names": _display_names_for(terrain_draw, true),
@@ -509,7 +542,8 @@ func _card_display_name(card_id: String) -> String:
 	return card_id.capitalize()
 
 func _draw_unique(source: Array[String], count: int) -> Array[String]:
-	var available: Array[String] = source.duplicate()
+	var available: Array[String] = []
+	available.append_array(source)
 	var draw: Array[String] = []
 	while draw.size() < count and not available.is_empty():
 		var index: int = rng.randi_range(0, available.size() - 1)

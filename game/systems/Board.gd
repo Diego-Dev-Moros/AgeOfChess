@@ -24,21 +24,31 @@ var feedback_text := ""
 var feedback_coord := Vector2i(-1, -1)
 var feedback_color := Color.WHITE
 var feedback_time_left := 0.0
+var feedback_events: Array[Dictionary] = []
 var active_terrain_id := "will"
 var board_textures: Dictionary = {}
 var piece_textures: Dictionary = {}
+var audio_player: AudioStreamPlayer2D
 
 func _ready() -> void:
 	_load_visual_assets()
+	audio_player = AudioStreamPlayer2D.new()
+	add_child(audio_player)
 	set_process_unhandled_input(true)
 	set_process(true)
 
 func _process(delta: float) -> void:
-	if feedback_time_left <= 0.0:
+	if feedback_events.is_empty() and feedback_time_left <= 0.0:
 		return
 	feedback_time_left = maxf(0.0, feedback_time_left - delta)
 	if feedback_time_left == 0.0:
 		feedback_text = ""
+	for index in range(feedback_events.size() - 1, -1, -1):
+		var event: Dictionary = feedback_events[index]
+		event["time_left"] = maxf(0.0, float(event.get("time_left", 0.0)) - delta)
+		feedback_events[index] = event
+		if float(event.get("time_left", 0.0)) <= 0.0:
+			feedback_events.remove_at(index)
 	queue_redraw()
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -144,6 +154,30 @@ func show_feedback(text: String, coord: Vector2i, color: Color = Color.WHITE) ->
 	feedback_coord = coord
 	feedback_color = color
 	feedback_time_left = FEEDBACK_DURATION
+	_add_feedback_event(text, coord, color)
+	queue_redraw()
+
+func show_combat_feedback(attacker_coord: Vector2i, defender_coord: Vector2i, combat_result: Dictionary) -> void:
+	if bool(combat_result.get("failed", false)):
+		show_feedback("MISSED", attacker_coord, Color(1.0, 0.35, 0.20))
+		return
+	var played_hit_sound := false
+	var defender_damage: int = int(combat_result.get("defender_damage", 0))
+	var attacker_damage: int = int(combat_result.get("attacker_damage", 0))
+	if defender_damage > 0:
+		_add_feedback_event("HIT -%d" % defender_damage, defender_coord, Color(1.0, 0.35, 0.20))
+		played_hit_sound = true
+	if attacker_damage > 0:
+		_add_feedback_event("RECOIL -%d" % attacker_damage, attacker_coord, Color(1.0, 0.76, 0.22))
+		played_hit_sound = true
+	if bool(combat_result.get("defender_died", false)):
+		_add_feedback_event("KO", defender_coord, Color(1.0, 0.1, 0.1), 1.6)
+		_play_sfx("res://assets/audio/sfx_piece_death_placeholder.wav")
+	elif bool(combat_result.get("attacker_died", false)):
+		_add_feedback_event("KO", attacker_coord, Color(1.0, 0.1, 0.1), 1.6)
+		_play_sfx("res://assets/audio/sfx_piece_death_placeholder.wav")
+	elif played_hit_sound:
+		_play_sfx("res://assets/audio/sfx_piece_hit_placeholder.wav")
 	queue_redraw()
 
 func board_to_world(coord: Vector2i) -> Vector2:
@@ -491,12 +525,20 @@ func _draw_pieces() -> void:
 			draw_string(font, board_to_world(piece.board_coord) + Vector2(10, 59), "KING", HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color.WHITE)
 
 func _draw_feedback() -> void:
-	if feedback_text == "" or not is_inside_board(feedback_coord):
-		return
 	var font := ThemeDB.fallback_font
-	var base_pos := board_to_world(feedback_coord) + Vector2(3, -9)
-	draw_rect(Rect2(base_pos + Vector2(-3, -19), Vector2(72, 24)), Color(0, 0, 0, 0.72), true)
-	draw_string(font, base_pos, feedback_text, HORIZONTAL_ALIGNMENT_CENTER, TILE_SIZE, 18, feedback_color)
+	for event in feedback_events:
+		var coord: Vector2i = event.get("coord", Vector2i(-1, -1))
+		if not is_inside_board(coord):
+			continue
+		var time_left: float = float(event.get("time_left", 0.0))
+		var duration: float = float(event.get("duration", FEEDBACK_DURATION))
+		var progress: float = 1.0 - clampf(time_left / duration, 0.0, 1.0)
+		var base_pos := board_to_world(coord) + Vector2(3, -9 - progress * 14.0)
+		var color: Color = event.get("color", Color.WHITE)
+		color.a = clampf(time_left / duration, 0.0, 1.0)
+		draw_circle(board_to_world(coord) + Vector2(TILE_SIZE * 0.5, TILE_SIZE * 0.5), 18.0 + progress * 16.0, Color(color.r, color.g, color.b, 0.16 * color.a))
+		draw_rect(Rect2(base_pos + Vector2(-3, -19), Vector2(72, 24)), Color(0, 0, 0, 0.72 * color.a), true)
+		draw_string(font, base_pos, String(event.get("text", "")), HORIZONTAL_ALIGNMENT_CENTER, TILE_SIZE, 18, color)
 
 func _coord_key(coord: Vector2i) -> String:
 	return "%d,%d" % [coord.x, coord.y]
@@ -520,3 +562,21 @@ func _load_texture(path: String) -> Texture2D:
 	if not ResourceLoader.exists(path):
 		return null
 	return load(path) as Texture2D
+
+func _add_feedback_event(text: String, coord: Vector2i, color: Color, duration: float = FEEDBACK_DURATION) -> void:
+	feedback_events.append({
+		"text": text,
+		"coord": coord,
+		"color": color,
+		"duration": duration,
+		"time_left": duration,
+	})
+
+func _play_sfx(path: String) -> void:
+	if audio_player == null or not ResourceLoader.exists(path):
+		return
+	var stream: AudioStream = load(path) as AudioStream
+	if stream == null:
+		return
+	audio_player.stream = stream
+	audio_player.play()

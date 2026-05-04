@@ -20,9 +20,11 @@ var combat_label: Label
 var log_label: RichTextLabel
 var message_label: Label
 var effect_card_row: HBoxContainer
+var cpu_effect_card_row: HBoxContainer
 var terrain_card_row: HBoxContainer
 var attack_dice_row: HBoxContainer
 var defense_dice_row: HBoxContainer
+var audio_player: AudioStreamPlayer
 var shuffle_button: Button
 var ability_button: Button
 var frenzy_button: Button
@@ -34,7 +36,9 @@ var log_folder_path := "res://Logs"
 var log_file_path := ""
 var match_log_id := ""
 var rendered_effect_cards_key := ""
+var rendered_cpu_effect_cards_key := ""
 var rendered_terrain_cards_key := ""
+var terrain_animation_running := false
 
 const BUFF_CARD_ASSETS: Dictionary = {
 	"stone_pieces": "res://assets/art/cards/buffs/card_buff_stone_pieces_192x288.png",
@@ -70,6 +74,9 @@ func update_match_state(state: Dictionary) -> void:
 	var effect_card_draw: Array = Array(state.get("effect_card_draw", []))
 	var selected_card: String = String(state.get("selected_effect_card", ""))
 	var applied_card: String = String(state.get("applied_effect_card", ""))
+	var cpu_effect_card_draw: Array = Array(state.get("cpu_effect_card_draw", []))
+	var cpu_selected_card: String = String(state.get("cpu_selected_effect_card", ""))
+	var cpu_applied_card: String = String(state.get("cpu_applied_effect_card", ""))
 	var active_terrain: String = String(state.get("terrain", ""))
 	turn_banner_label.text = "%s TURN - %s" % [player_name.to_upper(), turn_context]
 	turn_banner_label.modulate = Color(0.95, 0.92, 0.68) if current_player == 0 else Color(0.75, 0.84, 1.0)
@@ -77,10 +84,14 @@ func update_match_state(state: Dictionary) -> void:
 	state_label.text = "State: %s | Terrain: %s | Frenzy: %s" % [String(state.get("state", "")), active_terrain, "ON" if bool(state.get("frenzy", false)) else "OFF"]
 	timer_label.text = "Timer: %s" % _format_time(int(state.get("timer_remaining", 0)))
 	terrain_label.text = "Active Terrain: %s\n%s" % [String(state.get("terrain_display_name", "")), String(state.get("terrain_description", ""))]
-	cards_label.text = "Active Cards\nSelected: %s\nApplied: %s\nWhite Buff: %s\nCPU Debuff: %s" % [
+	cards_label.text = "Active Cards\nWhite selected: %s\nWhite applied: %s\nCPU selected: %s\nCPU applied: %s\nWhite Buff: %s\nWhite Debuff: %s\nCPU Buff: %s\nCPU Debuff: %s" % [
 		_short_card_name(selected_card),
 		_short_card_name(applied_card),
+		_short_card_name(cpu_selected_card),
+		_short_card_name(cpu_applied_card),
 		String(state.get("white_buff_display_name", "")),
+		String(state.get("white_debuff_display_name", "")),
+		String(state.get("black_buff_display_name", "")),
 		String(state.get("black_debuff_display_name", "")),
 	]
 	setup_label.text = "Setup Draw\nTerrains: %s\nActive: %s\nCard Pool: %s" % [
@@ -96,8 +107,10 @@ func update_match_state(state: Dictionary) -> void:
 		divinity[1],
 		" committed" if committed[1] else "",
 	]
-	_render_effect_cards(effect_card_draw, selected_card, applied_card)
-	_render_terrain_cards(terrain_draw, active_terrain)
+	_render_effect_cards(effect_card_row, effect_card_draw, selected_card, applied_card, true)
+	_render_effect_cards(cpu_effect_card_row, cpu_effect_card_draw, cpu_selected_card, cpu_applied_card, false)
+	if not terrain_animation_running:
+		_render_terrain_cards(terrain_draw, active_terrain)
 	if String(state.get("message", "")) != "":
 		message_label.text = String(state.get("message", ""))
 
@@ -116,8 +129,7 @@ func set_selected_piece(piece: Piece, legal_targets: Array[Vector2i]) -> void:
 
 func show_combat_result(result: Dictionary, attacker: Piece, defender: Piece) -> void:
 	_ensure_ui()
-	_render_dice_row(attack_dice_row, Array(result.get("attacker_dice", [])), "attack", Array(result.get("used_attacker_dice", [])).size())
-	_render_dice_row(defense_dice_row, Array(result.get("defender_dice", [])), "defense", Array(result.get("used_defender_dice", [])).size())
+	_play_dice_roll_sequence(result)
 	var lines: Array[String] = []
 	if result.failed:
 		lines.append("Combat failed: %s vs %s" % [attacker.display_code(), defender.display_code()])
@@ -267,12 +279,20 @@ func _build_ui() -> void:
 	root.add_child(terrain_card_row)
 
 	var card_draw_title := Label.new()
-	card_draw_title.text = "Effect Card Draw"
+	card_draw_title.text = "White Card Draw"
 	root.add_child(card_draw_title)
 
 	effect_card_row = HBoxContainer.new()
 	effect_card_row.add_theme_constant_override("separation", 8)
 	root.add_child(effect_card_row)
+
+	var cpu_card_draw_title := Label.new()
+	cpu_card_draw_title.text = "CPU Card Draw"
+	root.add_child(cpu_card_draw_title)
+
+	cpu_effect_card_row = HBoxContainer.new()
+	cpu_effect_card_row.add_theme_constant_override("separation", 8)
+	root.add_child(cpu_effect_card_row)
 
 	ability_button = Button.new()
 	ability_button.mouse_filter = Control.MOUSE_FILTER_STOP
@@ -337,21 +357,55 @@ func _build_ui() -> void:
 	log_label.custom_minimum_size = Vector2(420, 260)
 	root.add_child(log_label)
 
+	audio_player = AudioStreamPlayer.new()
+	add_child(audio_player)
+
 func _format_time(total_seconds: int) -> String:
 	var clamped_seconds: int = maxi(0, total_seconds)
 	return "%02d:%02d" % [int(clamped_seconds / 60), clamped_seconds % 60]
 
-func _render_effect_cards(card_ids: Array, selected_card: String, applied_card: String) -> void:
-	var key := "%s|%s|%s" % [str(card_ids), selected_card, applied_card]
-	if key == rendered_effect_cards_key:
+func play_card_draw_sequence() -> void:
+	_ensure_ui()
+	_pulse_row(effect_card_row)
+	_pulse_row(cpu_effect_card_row)
+	await get_tree().create_timer(0.35).timeout
+
+func play_terrain_draw_sequence(terrain_ids: Array[String], active_terrain: String) -> void:
+	_ensure_ui()
+	terrain_animation_running = true
+	message_label.text = "Terrain cards revealed..."
+	_render_terrain_cards(terrain_ids, "")
+	await get_tree().create_timer(2.0).timeout
+	message_label.text = "Shuffling terrain..."
+	for i in range(10):
+		var shuffled: Array[String] = []
+		shuffled.append_array(terrain_ids)
+		shuffled.shuffle()
+		_render_terrain_cards(shuffled, "")
+		_pulse_row(terrain_card_row)
+		await get_tree().create_timer(0.12).timeout
+	message_label.text = "Terrain drawn: %s" % active_terrain.capitalize()
+	_render_terrain_cards(terrain_ids, active_terrain)
+	_pulse_row(terrain_card_row)
+	await get_tree().create_timer(0.55).timeout
+	terrain_animation_running = false
+
+func _render_effect_cards(row: HBoxContainer, card_ids: Array, selected_card: String, applied_card: String, clickable: bool) -> void:
+	var key := "%s|%s|%s|%s" % [str(card_ids), selected_card, applied_card, str(clickable)]
+	if clickable and key == rendered_effect_cards_key:
 		return
-	rendered_effect_cards_key = key
-	_clear_children(effect_card_row)
+	if not clickable and key == rendered_cpu_effect_cards_key:
+		return
+	if clickable:
+		rendered_effect_cards_key = key
+	else:
+		rendered_cpu_effect_cards_key = key
+	_clear_children(row)
 	for card_id_variant in card_ids:
 		var card_id := String(card_id_variant)
 		var button := Button.new()
 		button.custom_minimum_size = Vector2(72, 108)
-		button.mouse_filter = Control.MOUSE_FILTER_STOP
+		button.mouse_filter = Control.MOUSE_FILTER_STOP if clickable else Control.MOUSE_FILTER_IGNORE
 		button.tooltip_text = _short_card_name(card_id)
 		button.expand_icon = true
 		button.icon = _texture_for_card(card_id)
@@ -360,8 +414,9 @@ func _render_effect_cards(card_ids: Array, selected_card: String, applied_card: 
 			button.modulate = Color(1.0, 0.96, 0.55)
 		if card_id == applied_card:
 			button.text = "USED"
-		button.pressed.connect(_on_effect_card_button_pressed.bind(card_id))
-		effect_card_row.add_child(button)
+		if clickable:
+			button.pressed.connect(_on_effect_card_button_pressed.bind(card_id))
+		row.add_child(button)
 
 func _render_terrain_cards(terrain_ids: Array, active_terrain: String) -> void:
 	var key := "%s|%s" % [str(terrain_ids), active_terrain]
@@ -402,6 +457,44 @@ func _react_dice_button(button: Button) -> void:
 	var tween := create_tween()
 	tween.tween_property(button, "position", button.position + Vector2(0, -8), 0.06)
 	tween.tween_property(button, "position", button.position, 0.12)
+
+func _play_dice_roll_sequence(result: Dictionary) -> void:
+	_play_sfx("res://assets/audio/sfx_dice_roll_placeholder.wav")
+	var attacker_dice: Array = Array(result.get("attacker_dice", []))
+	var defender_dice: Array = Array(result.get("defender_dice", []))
+	var used_attacker_count: int = Array(result.get("used_attacker_dice", [])).size()
+	var used_defender_count: int = Array(result.get("used_defender_dice", [])).size()
+	var attacker_count: int = maxi(1, attacker_dice.size())
+	var defender_count: int = maxi(1, defender_dice.size())
+	for i in range(8):
+		_render_dice_row(attack_dice_row, _random_dice_values(attacker_count), "attack", attacker_count)
+		_render_dice_row(defense_dice_row, _random_dice_values(defender_count), "defense", defender_count)
+		_pulse_row(attack_dice_row)
+		_pulse_row(defense_dice_row)
+		await get_tree().create_timer(0.055).timeout
+	_render_dice_row(attack_dice_row, attacker_dice, "attack", used_attacker_count)
+	_render_dice_row(defense_dice_row, defender_dice, "defense", used_defender_count)
+
+func _random_dice_values(count: int) -> Array[int]:
+	var values: Array[int] = []
+	for i in range(count):
+		values.append(randi_range(1, 6))
+	return values
+
+func _pulse_row(row: Control) -> void:
+	var tween := create_tween()
+	row.pivot_offset = row.size * 0.5
+	tween.tween_property(row, "scale", Vector2(1.04, 1.04), 0.08)
+	tween.tween_property(row, "scale", Vector2.ONE, 0.12)
+
+func _play_sfx(path: String) -> void:
+	if audio_player == null or not ResourceLoader.exists(path):
+		return
+	var stream: AudioStream = load(path) as AudioStream
+	if stream == null:
+		return
+	audio_player.stream = stream
+	audio_player.play()
 
 func _texture_for_card(card_id: String) -> Texture2D:
 	if BUFF_CARD_ASSETS.has(card_id):
