@@ -50,7 +50,7 @@ func is_pawn() -> bool:
 func take_damage(amount: int) -> void:
 	if is_king() or not alive:
 		return
-	hp -= max(0, amount)
+	hp -= maxi(0, amount)
 	if hp <= 0:
 		alive = false
 
@@ -64,7 +64,7 @@ func set_type(new_type: String) -> void:
 	value = stats.value
 	var previous_max_hp := max_hp
 	max_hp = stats.hp
-	hp = max(1, hp + max_hp - previous_max_hp)
+	hp = maxi(1, hp + max_hp - previous_max_hp)
 
 func clone() -> Piece:
 	var piece := Piece.new(id, owner_id, piece_type, board_coord)

@@ -59,3 +59,9 @@ ENV/
 
 # Ignore assets cache
 assets/cache/
+
+# Ignore cache logs
+game\Logs
+
+# Ignore obsidian files
+.obsidian

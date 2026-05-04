@@ -1,0 +1,821 @@
+{
+	"created_at": "2026-04-30T15:35:03",
+	"entries": [
+		{
+			"entry_id": 1,
+			"message": "Log file: res://Logs/partida_20260430_153245.json",
+			"timestamp": "2026-04-30T15:32:45"
+		},
+		{
+			"entry_id": 2,
+			"message": "Match started. White Buff: Stone Pieces - allied combat damage floor becomes 2.. CPU Debuff: Cowardice - affected attacks have a 15% failure chance.. Terrain: Will.",
+			"timestamp": "2026-04-30T15:32:45"
+		},
+		{
+			"entry_id": 3,
+			"message": "Selected WP. Legal moves: 2.",
+			"timestamp": "2026-04-30T15:32:49"
+		},
+		{
+			"entry_id": 4,
+			"message": "WP d2 to d4.",
+			"timestamp": "2026-04-30T15:32:49"
+		},
+		{
+			"entry_id": 5,
+			"message": "CPU moves BP to h5.",
+			"timestamp": "2026-04-30T15:32:50"
+		},
+		{
+			"entry_id": 6,
+			"message": "BP h7 to h5.",
+			"timestamp": "2026-04-30T15:32:50"
+		},
+		{
+			"entry_id": 7,
+			"message": "Selected WP. Legal moves: 2.",
+			"timestamp": "2026-04-30T15:32:52"
+		},
+		{
+			"entry_id": 8,
+			"message": "WP f2 to f4.",
+			"timestamp": "2026-04-30T15:32:53"
+		},
+		{
+			"entry_id": 9,
+			"message": "CPU moves BP to g6.",
+			"timestamp": "2026-04-30T15:32:53"
+		},
+		{
+			"entry_id": 10,
+			"message": "BP g7 to g6.",
+			"timestamp": "2026-04-30T15:32:53"
+		},
+		{
+			"entry_id": 11,
+			"message": "Selected WN. Legal moves: 2.",
+			"timestamp": "2026-04-30T15:32:55"
+		},
+		{
+			"entry_id": 12,
+			"message": "WN g1 to f3.",
+			"timestamp": "2026-04-30T15:32:56"
+		},
+		{
+			"entry_id": 13,
+			"message": "CPU moves BN to a6.",
+			"timestamp": "2026-04-30T15:32:56"
+		},
+		{
+			"entry_id": 14,
+			"message": "BN b8 to a6.",
+			"timestamp": "2026-04-30T15:32:56"
+		},
+		{
+			"entry_id": 15,
+			"message": "Selected WP. Legal moves: 1.",
+			"timestamp": "2026-04-30T15:32:58"
+		},
+		{
+			"entry_id": 16,
+			"message": "WP d4 to d5.",
+			"timestamp": "2026-04-30T15:32:58"
+		},
+		{
+			"entry_id": 17,
+			"message": "CPU moves BR to h6.",
+			"timestamp": "2026-04-30T15:32:58"
+		},
+		{
+			"entry_id": 18,
+			"message": "BR h8 to h6.",
+			"timestamp": "2026-04-30T15:32:58"
+		},
+		{
+			"entry_id": 19,
+			"message": "Selected WP. Legal moves: 2.",
+			"timestamp": "2026-04-30T15:32:59"
+		},
+		{
+			"entry_id": 20,
+			"message": "WP e2 to e4.",
+			"timestamp": "2026-04-30T15:33:00"
+		},
+		{
+			"entry_id": 21,
+			"message": "CPU moves BP to g5.",
+			"timestamp": "2026-04-30T15:33:01"
+		},
+		{
+			"entry_id": 22,
+			"message": "BP g6 to g5.",
+			"timestamp": "2026-04-30T15:33:01"
+		},
+		{
+			"entry_id": 23,
+			"message": "Selected WP. Legal moves: 2.",
+			"timestamp": "2026-04-30T15:33:02"
+		},
+		{
+			"entry_id": 24,
+			"message": "Combat: WP attacks BP | Attacker dice: rolled [2, 1] | used [2, 1] | Defender dice: rolled [4] | used [4] | Comparisons: | - 2<4 attacker -1 | Final damage: attacker takes 2, defender takes 0 | Modifier: Will: attacker +1 damage.",
+			"timestamp": "2026-04-30T15:33:02"
+		},
+		{
+			"entry_id": 25,
+			"message": "CPU moves BP to g4.",
+			"timestamp": "2026-04-30T15:33:02"
+		},
+		{
+			"entry_id": 26,
+			"message": "BP g5 to g4.",
+			"timestamp": "2026-04-30T15:33:02"
+		},
+		{
+			"entry_id": 27,
+			"message": "Selected WN. Legal moves: 6.",
+			"timestamp": "2026-04-30T15:33:03"
+		},
+		{
+			"entry_id": 28,
+			"message": "WN f3 to e5.",
+			"timestamp": "2026-04-30T15:33:06"
+		},
+		{
+			"entry_id": 29,
+			"message": "CPU moves BR to h8.",
+			"timestamp": "2026-04-30T15:33:06"
+		},
+		{
+			"entry_id": 30,
+			"message": "BR h6 to h8.",
+			"timestamp": "2026-04-30T15:33:06"
+		},
+		{
+			"entry_id": 31,
+			"message": "Selected WN. Legal moves: 8.",
+			"timestamp": "2026-04-30T15:33:09"
+		},
+		{
+			"entry_id": 32,
+			"message": "Selected WQ. Legal moves: 6.",
+			"timestamp": "2026-04-30T15:33:11"
+		},
+		{
+			"entry_id": 33,
+			"message": "Selected WP. Legal moves: 0.",
+			"timestamp": "2026-04-30T15:33:12"
+		},
+		{
+			"entry_id": 34,
+			"message": "Selected WN. Legal moves: 8.",
+			"timestamp": "2026-04-30T15:33:13"
+		},
+		{
+			"entry_id": 35,
+			"message": "WN e5 to g6.",
+			"timestamp": "2026-04-30T15:33:14"
+		},
+		{
+			"entry_id": 36,
+			"message": "CPU moves BP to g6.",
+			"timestamp": "2026-04-30T15:33:15"
+		},
+		{
+			"entry_id": 37,
+			"message": "Combat: BP attacks WN | Attacker dice: rolled [5, 5] | used [5, 5] | Defender dice: rolled [5, 4] | used [5, 4] | Comparisons: | - 5=5 both -1 | - 5>4 defender -1 | Final damage: attacker takes 2, defender takes 3 | Modifier: Will: defender +1 damage. | Modifier: Will: attacker +1 damage.",
+			"timestamp": "2026-04-30T15:33:15"
+		},
+		{
+			"entry_id": 38,
+			"message": "Selected WP. Legal moves: 1.",
+			"timestamp": "2026-04-30T15:33:17"
+		},
+		{
+			"entry_id": 39,
+			"message": "WP e4 to e5.",
+			"timestamp": "2026-04-30T15:33:17"
+		},
+		{
+			"entry_id": 40,
+			"message": "CPU moves BK to f7.",
+			"timestamp": "2026-04-30T15:33:18"
+		},
+		{
+			"entry_id": 41,
+			"message": "BK e8 to f7.",
+			"timestamp": "2026-04-30T15:33:18"
+		},
+		{
+			"entry_id": 42,
+			"message": "Selected WP. Legal moves: 1.",
+			"timestamp": "2026-04-30T15:33:19"
+		},
+		{
+			"entry_id": 43,
+			"message": "WP e5 to e6.",
+			"timestamp": "2026-04-30T15:33:19"
+		},
+		{
+			"entry_id": 44,
+			"message": "Black is in check.",
+			"timestamp": "2026-04-30T15:33:19"
+		},
+		{
+			"entry_id": 45,
+			"message": "CPU moves BP to e6.",
+			"timestamp": "2026-04-30T15:33:20"
+		},
+		{
+			"entry_id": 46,
+			"message": "Combat failed: BP vs WP | Modifier: Attack failed before combat. Chance: 15%",
+			"timestamp": "2026-04-30T15:33:20"
+		},
+		{
+			"entry_id": 47,
+			"message": "Selected WB. Legal moves: 5.",
+			"timestamp": "2026-04-30T15:33:22"
+		},
+		{
+			"entry_id": 48,
+			"message": "Selected WQ. Legal moves: 6.",
+			"timestamp": "2026-04-30T15:33:24"
+		},
+		{
+			"entry_id": 49,
+			"message": "WQ d1 to d4.",
+			"timestamp": "2026-04-30T15:33:25"
+		},
+		{
+			"entry_id": 50,
+			"message": "Black is in check.",
+			"timestamp": "2026-04-30T15:33:25"
+		},
+		{
+			"entry_id": 51,
+			"message": "CPU moves BP to e6.",
+			"timestamp": "2026-04-30T15:33:26"
+		},
+		{
+			"entry_id": 52,
+			"message": "Combat: BP attacks WP | Attacker dice: rolled [6, 2] | used [6, 2] | Defender dice: rolled [2] | used [2] | Comparisons: | - 6>2 defender -1 | Final damage: attacker takes 1, defender takes 4 | Modifier: Momentum: defender +1 damage. | Modifier: Will: defender +1 damage. | Modifier: Anti-stall: both +1 damage.",
+			"timestamp": "2026-04-30T15:33:26"
+		},
+		{
+			"entry_id": 53,
+			"message": "Selected WQ. Legal moves: 20.",
+			"timestamp": "2026-04-30T15:33:26"
+		},
+		{
+			"entry_id": 54,
+			"message": "Combat: WQ attacks BR | Attacker dice: rolled [6, 4, 3, 2] | used [6, 4, 3] | Defender dice: rolled [4, 3, 1] | used [4, 3, 1] | Comparisons: | - 6>4 defender -1 | - 4>3 defender -1 | - 3>1 defender -1 | Final damage: attacker takes 0, defender takes 5 | Modifier: Momentum: defender +1 damage. | Modifier: Will: defender +1 damage.",
+			"timestamp": "2026-04-30T15:33:28"
+		},
+		{
+			"entry_id": 55,
+			"message": "CPU moves BQ to d5.",
+			"timestamp": "2026-04-30T15:33:29"
+		},
+		{
+			"entry_id": 56,
+			"message": "Combat: BQ attacks WP | Attacker dice: rolled [5, 5, 2, 1] | used [5, 5, 2] | Defender dice: rolled [3] | used [3] | Comparisons: | - 5>3 defender -1 | Final damage: attacker takes 0, defender takes 3 | Modifier: Momentum: defender +1 damage. | Modifier: Will: defender +1 damage.",
+			"timestamp": "2026-04-30T15:33:29"
+		},
+		{
+			"entry_id": 57,
+			"message": "Selected WQ. Legal moves: 9.",
+			"timestamp": "2026-04-30T15:33:31"
+		},
+		{
+			"entry_id": 58,
+			"message": "WQ h8 to h7.",
+			"timestamp": "2026-04-30T15:33:32"
+		},
+		{
+			"entry_id": 59,
+			"message": "Black is in check.",
+			"timestamp": "2026-04-30T15:33:32"
+		},
+		{
+			"entry_id": 60,
+			"message": "CPU moves BK to e8.",
+			"timestamp": "2026-04-30T15:33:33"
+		},
+		{
+			"entry_id": 61,
+			"message": "BK f7 to e8.",
+			"timestamp": "2026-04-30T15:33:33"
+		},
+		{
+			"entry_id": 62,
+			"message": "Selected WB. Legal moves: 5.",
+			"timestamp": "2026-04-30T15:33:34"
+		},
+		{
+			"entry_id": 63,
+			"message": "Selected WK. Legal moves: 2.",
+			"timestamp": "2026-04-30T15:33:37"
+		},
+		{
+			"entry_id": 64,
+			"message": "Selected WB. Legal moves: 5.",
+			"timestamp": "2026-04-30T15:33:38"
+		},
+		{
+			"entry_id": 65,
+			"message": "WB f1 to b5.",
+			"timestamp": "2026-04-30T15:33:43"
+		},
+		{
+			"entry_id": 66,
+			"message": "Black is in check.",
+			"timestamp": "2026-04-30T15:33:43"
+		},
+		{
+			"entry_id": 67,
+			"message": "CPU moves BQ to b5.",
+			"timestamp": "2026-04-30T15:33:43"
+		},
+		{
+			"entry_id": 68,
+			"message": "Combat: BQ attacks WB | Attacker dice: rolled [4, 3, 2, 1] | used [4, 3, 2] | Defender dice: rolled [5, 1] | used [5, 1] | Comparisons: | - 4<5 attacker -1 | - 3>1 defender -1 | Final damage: attacker takes 2, defender takes 2 | Modifier: Will: defender +1 damage. | Modifier: Will: attacker +1 damage.",
+			"timestamp": "2026-04-30T15:33:43"
+		},
+		{
+			"entry_id": 69,
+			"message": "Selected WB. Legal moves: 8.",
+			"timestamp": "2026-04-30T15:33:50"
+		},
+		{
+			"entry_id": 70,
+			"message": "Selected WB. Legal moves: 8.",
+			"timestamp": "2026-04-30T15:33:51"
+		},
+		{
+			"entry_id": 71,
+			"message": "Combat: WB attacks BN | Attacker dice: rolled [4, 1, 1] | used [4, 1, 1] | Defender dice: rolled [5, 3] | used [5, 3] | Comparisons: | - 4<5 attacker -1 | - 1<3 attacker -1 | Final damage: attacker takes 3, defender takes 0 | Modifier: Will: attacker +1 damage.",
+			"timestamp": "2026-04-30T15:33:55"
+		},
+		{
+			"entry_id": 72,
+			"message": "CPU moves BQ to g2.",
+			"timestamp": "2026-04-30T15:33:55"
+		},
+		{
+			"entry_id": 73,
+			"message": "Combat failed: BQ vs WP | Modifier: Attack failed before combat. Chance: 15%",
+			"timestamp": "2026-04-30T15:33:55"
+		},
+		{
+			"entry_id": 74,
+			"message": "Selected WQ. Legal moves: 11.",
+			"timestamp": "2026-04-30T15:34:04"
+		},
+		{
+			"entry_id": 75,
+			"message": "Selected WB. Legal moves: 5.",
+			"timestamp": "2026-04-30T15:34:07"
+		},
+		{
+			"entry_id": 76,
+			"message": "WB c1 to h6.",
+			"timestamp": "2026-04-30T15:34:09"
+		},
+		{
+			"entry_id": 77,
+			"message": "CPU moves BN to h6.",
+			"timestamp": "2026-04-30T15:34:09"
+		},
+		{
+			"entry_id": 78,
+			"message": "Combat: BN attacks WB | Attacker dice: rolled [6, 3, 1] | used [6, 3, 1] | Defender dice: rolled [4, 1] | used [4, 1] | Comparisons: | - 6>4 defender -1 | - 3>1 defender -1 | Final damage: attacker takes 0, defender takes 4 | Modifier: Momentum: defender +1 damage. | Modifier: Will: defender +1 damage.",
+			"timestamp": "2026-04-30T15:34:09"
+		},
+		{
+			"entry_id": 79,
+			"message": "Selected WQ. Legal moves: 10.",
+			"timestamp": "2026-04-30T15:34:11"
+		},
+		{
+			"entry_id": 80,
+			"message": "Combat: WQ attacks BN | Attacker dice: rolled [4, 4, 3, 3] | used [4, 4, 3] | Defender dice: rolled [2, 2] | used [2, 2] | Comparisons: | - 4>2 defender -1 | - 4>2 defender -1 | Final damage: attacker takes 0, defender takes 4 | Modifier: Momentum: defender +1 damage. | Modifier: Will: defender +1 damage.",
+			"timestamp": "2026-04-30T15:34:12"
+		},
+		{
+			"entry_id": 81,
+			"message": "CPU moves BQ to a2.",
+			"timestamp": "2026-04-30T15:34:13"
+		},
+		{
+			"entry_id": 82,
+			"message": "Combat: BQ attacks WP | Attacker dice: rolled [4, 4, 3, 1] | used [4, 4, 3] | Defender dice: rolled [5] | used [5] | Comparisons: | - 4<5 attacker -1 | Final damage: attacker takes 2, defender takes 0 | Modifier: Will: attacker +1 damage.",
+			"timestamp": "2026-04-30T15:34:13"
+		},
+		{
+			"entry_id": 83,
+			"message": "Selected WQ. Legal moves: 13.",
+			"timestamp": "2026-04-30T15:34:15"
+		},
+		{
+			"entry_id": 84,
+			"message": "Combat: WQ attacks BP | Attacker dice: rolled [5, 4, 1, 1] | used [5, 4, 1] | Defender dice: rolled [6] | used [6] | Comparisons: | - 5<6 attacker -1 | Final damage: attacker takes 2, defender takes 0 | Modifier: Will: attacker +1 damage.",
+			"timestamp": "2026-04-30T15:34:15"
+		},
+		{
+			"entry_id": 85,
+			"message": "CPU moves BQ to a2.",
+			"timestamp": "2026-04-30T15:34:16"
+		},
+		{
+			"entry_id": 86,
+			"message": "Combat: BQ attacks WP | Attacker dice: rolled [6, 6, 6, 4] | used [6, 6, 6] | Defender dice: rolled [5] | used [5] | Comparisons: | - 6>5 defender -1 | Final damage: attacker takes 0, defender takes 3 | Modifier: Momentum: defender +1 damage. | Modifier: Will: defender +1 damage.",
+			"timestamp": "2026-04-30T15:34:16"
+		},
+		{
+			"entry_id": 87,
+			"message": "Selected WQ. Legal moves: 13.",
+			"timestamp": "2026-04-30T15:34:16"
+		},
+		{
+			"entry_id": 88,
+			"message": "Combat: WQ attacks BP | Attacker dice: rolled [6, 4, 4, 1] | used [6, 4, 4] | Defender dice: rolled [4] | used [4] | Comparisons: | - 6>4 defender -1 | Final damage: attacker takes 0, defender takes 3 | Modifier: Momentum: defender +1 damage. | Modifier: Will: defender +1 damage.",
+			"timestamp": "2026-04-30T15:34:17"
+		},
+		{
+			"entry_id": 89,
+			"message": "Black is in check.",
+			"timestamp": "2026-04-30T15:34:17"
+		},
+		{
+			"entry_id": 90,
+			"message": "CPU moves BK to d8.",
+			"timestamp": "2026-04-30T15:34:17"
+		},
+		{
+			"entry_id": 91,
+			"message": "BK e8 to d8.",
+			"timestamp": "2026-04-30T15:34:17"
+		},
+		{
+			"entry_id": 92,
+			"message": "Selected WQ. Legal moves: 16.",
+			"timestamp": "2026-04-30T15:34:19"
+		},
+		{
+			"entry_id": 93,
+			"message": "Combat: WQ attacks BP | Attacker dice: rolled [6, 5, 2, 1] | used [6, 5, 2] | Defender dice: rolled [5] | used [5] | Comparisons: | - 6>5 defender -1 | Final damage: attacker takes 0, defender takes 3 | Modifier: Momentum: defender +1 damage. | Modifier: Will: defender +1 damage.",
+			"timestamp": "2026-04-30T15:34:22"
+		},
+		{
+			"entry_id": 94,
+			"message": "CPU moves BQ to b2.",
+			"timestamp": "2026-04-30T15:34:22"
+		},
+		{
+			"entry_id": 95,
+			"message": "Combat: BQ attacks WP | Attacker dice: rolled [4, 4, 2, 1] | used [4, 4, 2] | Defender dice: rolled [1] | used [1] | Comparisons: | - 4>1 defender -1 | Final damage: attacker takes 0, defender takes 3 | Modifier: Momentum: defender +1 damage. | Modifier: Will: defender +1 damage.",
+			"timestamp": "2026-04-30T15:34:22"
+		},
+		{
+			"entry_id": 96,
+			"message": "Selected WN. Legal moves: 3.",
+			"timestamp": "2026-04-30T15:34:24"
+		},
+		{
+			"entry_id": 97,
+			"message": "Selected WR. Legal moves: 5.",
+			"timestamp": "2026-04-30T15:34:25"
+		},
+		{
+			"entry_id": 98,
+			"message": "Combat: WR attacks BN | Attacker dice: rolled [4, 3, 2, 1] | used [4, 3, 2] | Defender dice: rolled [3, 1] | used [3, 1] | Comparisons: | - 4>3 defender -1 | - 3>1 defender -1 | Final damage: attacker takes 0, defender takes 4 | Modifier: Momentum: defender +1 damage. | Modifier: Will: defender +1 damage.",
+			"timestamp": "2026-04-30T15:34:25"
+		},
+		{
+			"entry_id": 99,
+			"message": "CPU moves BQ to c2.",
+			"timestamp": "2026-04-30T15:34:26"
+		},
+		{
+			"entry_id": 100,
+			"message": "Combat: BQ attacks WP | Attacker dice: rolled [6, 5, 4, 2] | used [6, 5, 4] | Defender dice: rolled [3] | used [3] | Comparisons: | - 6>3 defender -1 | Final damage: attacker takes 0, defender takes 3 | Modifier: Momentum: defender +1 damage. | Modifier: Will: defender +1 damage.",
+			"timestamp": "2026-04-30T15:34:26"
+		},
+		{
+			"entry_id": 101,
+			"message": "Selected WN. Legal moves: 3.",
+			"timestamp": "2026-04-30T15:34:27"
+		},
+		{
+			"entry_id": 102,
+			"message": "Selected WN. Legal moves: 3.",
+			"timestamp": "2026-04-30T15:34:28"
+		},
+		{
+			"entry_id": 103,
+			"message": "WN b1 to c3.",
+			"timestamp": "2026-04-30T15:34:28"
+		},
+		{
+			"entry_id": 104,
+			"message": "CPU moves BP to a6.",
+			"timestamp": "2026-04-30T15:34:29"
+		},
+		{
+			"entry_id": 105,
+			"message": "Combat failed: BP vs WR | Modifier: Attack failed before combat. Chance: 15%",
+			"timestamp": "2026-04-30T15:34:29"
+		},
+		{
+			"entry_id": 106,
+			"message": "Selected WN. Legal moves: 8.",
+			"timestamp": "2026-04-30T15:34:31"
+		},
+		{
+			"entry_id": 107,
+			"message": "WN c3 to b5.",
+			"timestamp": "2026-04-30T15:34:31"
+		},
+		{
+			"entry_id": 108,
+			"message": "CPU moves BQ to g2.",
+			"timestamp": "2026-04-30T15:34:32"
+		},
+		{
+			"entry_id": 109,
+			"message": "Combat: BQ attacks WP | Attacker dice: rolled [6, 5, 5, 1] | used [6, 5, 5] | Defender dice: rolled [2] | used [2] | Comparisons: | - 6>2 defender -1 | Final damage: attacker takes 0, defender takes 3 | Modifier: Momentum: defender +1 damage. | Modifier: Will: defender +1 damage.",
+			"timestamp": "2026-04-30T15:34:32"
+		},
+		{
+			"entry_id": 110,
+			"message": "Selected WN. Legal moves: 6.",
+			"timestamp": "2026-04-30T15:34:33"
+		},
+		{
+			"entry_id": 111,
+			"message": "Combat: WN attacks BP | Attacker dice: rolled [6, 3, 2] | used [6, 3, 2] | Defender dice: rolled [6] | used [6] | Comparisons: | - 6=6 both -1 | Final damage: attacker takes 2, defender takes 3 | Modifier: Stone Pieces: defender damage floor set to 2. | Modifier: Will: defender +1 damage. | Modifier: Will: attacker +1 damage.",
+			"timestamp": "2026-04-30T15:34:34"
+		},
+		{
+			"entry_id": 112,
+			"message": "CPU moves BQ to h2.",
+			"timestamp": "2026-04-30T15:34:34"
+		},
+		{
+			"entry_id": 113,
+			"message": "Combat: BQ attacks WP | Attacker dice: rolled [6, 4, 3, 1] | used [6, 4, 3] | Defender dice: rolled [5] | used [5] | Comparisons: | - 6>5 defender -1 | Final damage: attacker takes 0, defender takes 3 | Modifier: Momentum: defender +1 damage. | Modifier: Will: defender +1 damage.",
+			"timestamp": "2026-04-30T15:34:34"
+		},
+		{
+			"entry_id": 114,
+			"message": "Selected WR. Legal moves: 10.",
+			"timestamp": "2026-04-30T15:34:37"
+		},
+		{
+			"entry_id": 115,
+			"message": "Selected WR. Legal moves: 10.",
+			"timestamp": "2026-04-30T15:34:41"
+		},
+		{
+			"entry_id": 116,
+			"message": "Combat: WR attacks BP | Attacker dice: rolled [5, 3, 3, 1] | used [5, 3, 3] | Defender dice: rolled [5] | used [5] | Comparisons: | - 5=5 both -1 | Final damage: attacker takes 2, defender takes 3 | Modifier: Stone Pieces: defender damage floor set to 2. | Modifier: Will: defender +1 damage. | Modifier: Will: attacker +1 damage.",
+			"timestamp": "2026-04-30T15:34:42"
+		},
+		{
+			"entry_id": 117,
+			"message": "CPU moves BK to c7.",
+			"timestamp": "2026-04-30T15:34:43"
+		},
+		{
+			"entry_id": 118,
+			"message": "Black King used Divine Attack. Divinity now 2.",
+			"timestamp": "2026-04-30T15:34:43"
+		},
+		{
+			"entry_id": 119,
+			"message": "Selected WR. Legal moves: 8.",
+			"timestamp": "2026-04-30T15:34:43"
+		},
+		{
+			"entry_id": 120,
+			"message": "Combat: WR attacks BR | Attacker dice: rolled [4, 4, 3, 2] | used [4, 4, 3] | Defender dice: rolled [4, 3, 2] | used [4, 3, 2] | Comparisons: | - 4=4 both -1 | - 4>3 defender -1 | - 3>2 defender -1 | Final damage: attacker takes 2, defender takes 4 | Modifier: Will: defender +1 damage. | Modifier: Will: attacker +1 damage.",
+			"timestamp": "2026-04-30T15:34:44"
+		},
+		{
+			"entry_id": 121,
+			"message": "CPU moves BQ to h1.",
+			"timestamp": "2026-04-30T15:34:45"
+		},
+		{
+			"entry_id": 122,
+			"message": "Combat: BQ attacks WR | Attacker dice: rolled [6, 4, 3, 2] | used [6, 4, 3] | Defender dice: rolled [4, 2, 1] | used [4, 2, 1] | Comparisons: | - 6>4 defender -1 | - 4>2 defender -1 | - 3>1 defender -1 | Final damage: attacker takes 0, defender takes 5 | Modifier: Momentum: defender +1 damage. | Modifier: Will: defender +1 damage.",
+			"timestamp": "2026-04-30T15:34:45"
+		},
+		{
+			"entry_id": 123,
+			"message": "White is in check.",
+			"timestamp": "2026-04-30T15:34:45"
+		},
+		{
+			"entry_id": 124,
+			"message": "Black King's commitment is cleared.",
+			"timestamp": "2026-04-30T15:34:45"
+		},
+		{
+			"entry_id": 125,
+			"message": "Selected WQ. Legal moves: 1.",
+			"timestamp": "2026-04-30T15:34:46"
+		},
+		{
+			"entry_id": 126,
+			"message": "Selected WQ. Legal moves: 1.",
+			"timestamp": "2026-04-30T15:34:49"
+		},
+		{
+			"entry_id": 127,
+			"message": "WQ g4 to g1.",
+			"timestamp": "2026-04-30T15:34:50"
+		},
+		{
+			"entry_id": 128,
+			"message": "CPU moves BQ to g1.",
+			"timestamp": "2026-04-30T15:34:50"
+		},
+		{
+			"entry_id": 129,
+			"message": "Combat: BQ attacks WQ | Attacker dice: rolled [4, 3, 2, 1] | used [4, 3, 2] | Defender dice: rolled [6, 2, 1] | used [6, 2, 1] | Comparisons: | - 4<6 attacker -1 | - 3>2 defender -1 | - 2>1 defender -1 | Final damage: attacker takes 2, defender takes 3 | Modifier: Will: defender +1 damage. | Modifier: Will: attacker +1 damage.",
+			"timestamp": "2026-04-30T15:34:50"
+		},
+		{
+			"entry_id": 130,
+			"message": "Selected WK. Legal moves: 5.",
+			"timestamp": "2026-04-30T15:34:51"
+		},
+		{
+			"entry_id": 131,
+			"message": "WK e1 to d2.",
+			"timestamp": "2026-04-30T15:34:52"
+		},
+		{
+			"entry_id": 132,
+			"message": "CPU moves BK to d8.",
+			"timestamp": "2026-04-30T15:34:52"
+		},
+		{
+			"entry_id": 133,
+			"message": "BK c7 to d8.",
+			"timestamp": "2026-04-30T15:34:52"
+		},
+		{
+			"entry_id": 134,
+			"message": "Black King recovers 1 Divinity.",
+			"timestamp": "2026-04-30T15:34:52"
+		},
+		{
+			"entry_id": 135,
+			"message": "Selected WK. Legal moves: 8.",
+			"timestamp": "2026-04-30T15:34:53"
+		},
+		{
+			"entry_id": 136,
+			"message": "WK d2 to d3.",
+			"timestamp": "2026-04-30T15:34:53"
+		},
+		{
+			"entry_id": 137,
+			"message": "CPU moves BK to c7.",
+			"timestamp": "2026-04-30T15:34:54"
+		},
+		{
+			"entry_id": 138,
+			"message": "BK d8 to c7.",
+			"timestamp": "2026-04-30T15:34:54"
+		},
+		{
+			"entry_id": 139,
+			"message": "Selected WK. Legal moves: 8.",
+			"timestamp": "2026-04-30T15:34:54"
+		},
+		{
+			"entry_id": 140,
+			"message": "WK d3 to e4.",
+			"timestamp": "2026-04-30T15:34:54"
+		},
+		{
+			"entry_id": 141,
+			"message": "CPU moves BK to d6.",
+			"timestamp": "2026-04-30T15:34:55"
+		},
+		{
+			"entry_id": 142,
+			"message": "BK c7 to d6.",
+			"timestamp": "2026-04-30T15:34:55"
+		},
+		{
+			"entry_id": 143,
+			"message": "Selected WK. Legal moves: 5.",
+			"timestamp": "2026-04-30T15:34:55"
+		},
+		{
+			"entry_id": 144,
+			"message": "Selected WK. Legal moves: 5.",
+			"timestamp": "2026-04-30T15:34:56"
+		},
+		{
+			"entry_id": 145,
+			"message": "WK e4 to f4.",
+			"timestamp": "2026-04-30T15:34:57"
+		},
+		{
+			"entry_id": 146,
+			"message": "CPU moves BB to d7.",
+			"timestamp": "2026-04-30T15:34:57"
+		},
+		{
+			"entry_id": 147,
+			"message": "BB c8 to d7.",
+			"timestamp": "2026-04-30T15:34:57"
+		},
+		{
+			"entry_id": 148,
+			"message": "Selected WK. Legal moves: 6.",
+			"timestamp": "2026-04-30T15:34:57"
+		},
+		{
+			"entry_id": 149,
+			"message": "WK f4 to g5.",
+			"timestamp": "2026-04-30T15:34:58"
+		},
+		{
+			"entry_id": 150,
+			"message": "CPU moves BK to d5.",
+			"timestamp": "2026-04-30T15:34:59"
+		},
+		{
+			"entry_id": 151,
+			"message": "BK d6 to d5.",
+			"timestamp": "2026-04-30T15:34:59"
+		},
+		{
+			"entry_id": 152,
+			"message": "Selected WK. Legal moves: 5.",
+			"timestamp": "2026-04-30T15:34:59"
+		},
+		{
+			"entry_id": 153,
+			"message": "WK g5 to g6.",
+			"timestamp": "2026-04-30T15:35:00"
+		},
+		{
+			"entry_id": 154,
+			"message": "CPU moves BB to c8.",
+			"timestamp": "2026-04-30T15:35:00"
+		},
+		{
+			"entry_id": 155,
+			"message": "BB d7 to c8.",
+			"timestamp": "2026-04-30T15:35:00"
+		},
+		{
+			"entry_id": 156,
+			"message": "Selected WK. Legal moves: 4.",
+			"timestamp": "2026-04-30T15:35:01"
+		},
+		{
+			"entry_id": 157,
+			"message": "WK g6 to f7.",
+			"timestamp": "2026-04-30T15:35:01"
+		},
+		{
+			"entry_id": 158,
+			"message": "CPU moves BP to b6.",
+			"timestamp": "2026-04-30T15:35:02"
+		},
+		{
+			"entry_id": 159,
+			"message": "BP b7 to b6.",
+			"timestamp": "2026-04-30T15:35:02"
+		},
+		{
+			"entry_id": 160,
+			"message": "Selected WK. Legal moves: 4.",
+			"timestamp": "2026-04-30T15:35:02"
+		},
+		{
+			"entry_id": 161,
+			"message": "White King used Divine Attack. Divinity now 2.",
+			"timestamp": "2026-04-30T15:35:02"
+		},
+		{
+			"entry_id": 162,
+			"message": "CPU moves BB to a6.",
+			"timestamp": "2026-04-30T15:35:03"
+		},
+		{
+			"entry_id": 163,
+			"message": "BB c8 to a6.",
+			"timestamp": "2026-04-30T15:35:03"
+		}
+	],
+	"partida_id": "partida_20260430_153245"
+}

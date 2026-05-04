@@ -1,3 +1,5 @@
 res://systems/Board.gd
 res://ui/MatchUI.gd
 res://managers/GameManager.gd
+res://systems/CombatResolver.gd
+res://pieces/Piece.gd

@@ -12,6 +12,7 @@ const BLACK_PIECE := Color(0.12, 0.12, 0.14)
 const SELECTED_COLOR := Color(0.95, 0.82, 0.24, 0.75)
 const MOVE_COLOR := Color(0.20, 0.75, 0.35, 0.50)
 const TARGET_COLOR := Color(0.85, 0.20, 0.20, 0.55)
+const FEEDBACK_DURATION := 1.25
 
 var pieces: Dictionary = {}
 var occupancy: Dictionary = {}
@@ -19,9 +20,26 @@ var selected_coord := Vector2i(-1, -1)
 var legal_target_coords: Array[Vector2i] = []
 var en_passant_target := Vector2i(-1, -1)
 var last_move := {}
+var feedback_text := ""
+var feedback_coord := Vector2i(-1, -1)
+var feedback_color := Color.WHITE
+var feedback_time_left := 0.0
+var active_terrain_id := "will"
+var board_textures: Dictionary = {}
+var piece_textures: Dictionary = {}
 
 func _ready() -> void:
+	_load_visual_assets()
 	set_process_unhandled_input(true)
+	set_process(true)
+
+func _process(delta: float) -> void:
+	if feedback_time_left <= 0.0:
+		return
+	feedback_time_left = maxf(0.0, feedback_time_left - delta)
+	if feedback_time_left == 0.0:
+		feedback_text = ""
+	queue_redraw()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
@@ -35,6 +53,7 @@ func _draw() -> void:
 	_draw_tiles()
 	_draw_highlights()
 	_draw_pieces()
+	_draw_feedback()
 
 func setup_initial_position() -> void:
 	pieces.clear()
@@ -68,8 +87,8 @@ func apply_will_terrain() -> void:
 func apply_crystal_pieces(target_player_id: int) -> void:
 	for piece in pieces.values():
 		if piece.alive and piece.owner_id == target_player_id and not piece.is_king() and not piece.is_pawn():
-			piece.max_hp = max(1, piece.max_hp - 1)
-			piece.hp = min(piece.hp, piece.max_hp)
+			piece.max_hp = maxi(1, piece.max_hp - 1)
+			piece.hp = mini(piece.hp, piece.max_hp)
 	queue_redraw()
 
 func apply_demon_king(target_player_id: int) -> void:
@@ -114,6 +133,17 @@ func set_selection(coord: Vector2i, legal_coords: Array[Vector2i]) -> void:
 func clear_selection() -> void:
 	selected_coord = Vector2i(-1, -1)
 	legal_target_coords.clear()
+	queue_redraw()
+
+func set_active_terrain(terrain_id: String) -> void:
+	active_terrain_id = terrain_id
+	queue_redraw()
+
+func show_feedback(text: String, coord: Vector2i, color: Color = Color.WHITE) -> void:
+	feedback_text = text
+	feedback_coord = coord
+	feedback_color = color
+	feedback_time_left = FEEDBACK_DURATION
 	queue_redraw()
 
 func board_to_world(coord: Vector2i) -> Vector2:
@@ -417,6 +447,13 @@ func _update_en_passant_target(piece: Piece, from_coord: Vector2i, target: Vecto
 		en_passant_target = Vector2i(from_coord.x, (from_coord.y + target.y) / 2)
 
 func _draw_tiles() -> void:
+	var board_texture: Texture2D = board_textures.get(active_terrain_id, null)
+	if board_texture != null:
+		draw_texture_rect(board_texture, Rect2(Vector2.ZERO, Vector2(BOARD_SIZE, BOARD_SIZE) * TILE_SIZE), false)
+		for y in range(BOARD_SIZE):
+			for x in range(BOARD_SIZE):
+				draw_rect(Rect2(Vector2(x, y) * TILE_SIZE, Vector2.ONE * TILE_SIZE), Color(0, 0, 0, 0.15), false, 1.0)
+		return
 	for y in range(BOARD_SIZE):
 		for x in range(BOARD_SIZE):
 			var color := LIGHT_TILE if (x + y) % 2 == 0 else DARK_TILE
@@ -435,14 +472,51 @@ func _draw_pieces() -> void:
 	for piece in get_all_alive_pieces():
 		var rect := Rect2(board_to_world(piece.board_coord) + Vector2(6, 6), Vector2(TILE_SIZE - 12, TILE_SIZE - 12))
 		var color := WHITE_PIECE if piece.owner_id == 0 else BLACK_PIECE
-		draw_rect(rect, color, true, 0.0)
-		draw_rect(rect, Color.BLACK, false, 2.0)
 		var text_color := Color.BLACK if piece.owner_id == 0 else Color.WHITE
-		draw_string(font, board_to_world(piece.board_coord) + Vector2(13, 31), piece.display_code(), HORIZONTAL_ALIGNMENT_LEFT, -1, 18, text_color)
-		if not piece.is_king():
-			draw_string(font, board_to_world(piece.board_coord) + Vector2(10, 55), "HP %d" % piece.hp, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, text_color)
+		var texture_key := "%s_%s" % ["white" if piece.owner_id == 0 else "black", piece.piece_type]
+		var piece_texture: Texture2D = piece_textures.get(texture_key, null)
+		if piece_texture != null:
+			draw_rect(rect, Color(0, 0, 0, 0.32), true, 0.0)
+			draw_texture_rect(piece_texture, rect, false)
+			draw_rect(rect, Color.BLACK, false, 2.0)
 		else:
-			draw_string(font, board_to_world(piece.board_coord) + Vector2(10, 55), "KING", HORIZONTAL_ALIGNMENT_LEFT, -1, 12, text_color)
+			draw_rect(rect, color, true, 0.0)
+			draw_rect(rect, Color.BLACK, false, 2.0)
+			draw_string(font, board_to_world(piece.board_coord) + Vector2(13, 31), piece.display_code(), HORIZONTAL_ALIGNMENT_LEFT, -1, 18, text_color)
+		if not piece.is_king():
+			draw_rect(Rect2(board_to_world(piece.board_coord) + Vector2(7, 47), Vector2(50, 14)), Color(0, 0, 0, 0.62), true)
+			draw_string(font, board_to_world(piece.board_coord) + Vector2(10, 59), "HP %d" % piece.hp, HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color.WHITE)
+		else:
+			draw_rect(Rect2(board_to_world(piece.board_coord) + Vector2(7, 47), Vector2(50, 14)), Color(0, 0, 0, 0.62), true)
+			draw_string(font, board_to_world(piece.board_coord) + Vector2(10, 59), "KING", HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color.WHITE)
+
+func _draw_feedback() -> void:
+	if feedback_text == "" or not is_inside_board(feedback_coord):
+		return
+	var font := ThemeDB.fallback_font
+	var base_pos := board_to_world(feedback_coord) + Vector2(3, -9)
+	draw_rect(Rect2(base_pos + Vector2(-3, -19), Vector2(72, 24)), Color(0, 0, 0, 0.72), true)
+	draw_string(font, base_pos, feedback_text, HORIZONTAL_ALIGNMENT_CENTER, TILE_SIZE, 18, feedback_color)
 
 func _coord_key(coord: Vector2i) -> String:
 	return "%d,%d" % [coord.x, coord.y]
+
+func _load_visual_assets() -> void:
+	board_textures.clear()
+	piece_textures.clear()
+	for terrain_id in ["will", "equal_conditions", "dirty_play", "holy_ground", "hell", "corrupted"]:
+		var board_path := "res://assets/art/board/board_%s_512.png" % terrain_id
+		var board_texture := _load_texture(board_path)
+		if board_texture != null:
+			board_textures[terrain_id] = board_texture
+	for owner_name in ["white", "black"]:
+		for piece_type in [Piece.TYPE_PAWN, Piece.TYPE_KNIGHT, Piece.TYPE_BISHOP, Piece.TYPE_ROOK, Piece.TYPE_QUEEN, Piece.TYPE_KING]:
+			var piece_path := "res://assets/art/pieces/%s/piece_%s_%s_idle_48.png" % [owner_name, owner_name, piece_type]
+			var piece_texture := _load_texture(piece_path)
+			if piece_texture != null:
+				piece_textures["%s_%s" % [owner_name, piece_type]] = piece_texture
+
+func _load_texture(path: String) -> Texture2D:
+	if not ResourceLoader.exists(path):
+		return null
+	return load(path) as Texture2D

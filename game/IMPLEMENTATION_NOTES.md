@@ -79,6 +79,14 @@ Headless smoke test, when Godot is available on PATH:
 godot --headless --path game --script res://tests/SmokeTest.gd
 ```
 
+Runtime match logs are saved as one JSON file per match:
+
+```txt
+res://Logs/partida_YYYYMMDD_HHMMSS.json
+```
+
+During development this maps to the visible project folder `game/Logs/`.
+
 ## Known Prototype Tradeoffs
 
 - Promotion auto-selects Queen to keep the first loop fast.

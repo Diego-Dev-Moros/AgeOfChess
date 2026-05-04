@@ -134,7 +134,7 @@ func _apply_damage_modifiers(result: Dictionary, attacker: Piece, defender: Piec
 		result.defender_damage += 1
 		result.log.append("Dirty Play success: defender +1 damage.")
 
-	var anti_stall_bonus := int(context.get("anti_stall_bonus", 0))
+	var anti_stall_bonus: int = int(context.get("anti_stall_bonus", 0))
 	if anti_stall_bonus > 0:
 		result.attacker_damage += anti_stall_bonus
 		result.defender_damage += anti_stall_bonus
